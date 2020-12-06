@@ -8,8 +8,8 @@ body {
   padding: 0 48px;
 }
 
-.add-note,
-.note {
+.add-task,
+.task-item {
   background-color: rgba(255, 255, 255, 0.24);
   padding: 16px 32px;
   font-weight: 500;
@@ -20,7 +20,7 @@ body {
   color: #ffffff;
 }
 
-.add-note {
+.add-task {
   margin-top: 48px;
   width: 100%;
   height: 72px;
@@ -29,7 +29,7 @@ body {
   border-radius: 64px;
 }
 
-.add-note::placeholder {
+.add-task::placeholder {
   color: rgba(255, 255, 255, 0.56);
 }
 
@@ -39,7 +39,7 @@ body {
   list-style: none;
 }
 
-.note {
+.task-item {
   margin-bottom: 24px;
   border-radius: 24px;
   display: flex;
