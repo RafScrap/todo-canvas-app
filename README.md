@@ -18,7 +18,7 @@
 
 ## Создание смартапа в "SmartApp Studio":
 
-1. Идём на страницу SmartApp Studio ([ссылка](https://developers.sber.ru/studio/)~~https://smartapp-studio.sberdevices.ru/~~));
+1. Идём на страницу SmartApp Studio ([ссылка](https://developers.sber.ru/studio/) ~~[старая ссылка](https://smartapp-studio.sberdevices.ru/)~~);
 1. Нажимаем "Создать смартап";
 1. Указываем "Название смартапа" (указываем это же название в файле ".env.sample", в строке "REACT_APP_SMARTAPP");
 1. Переключаем "Выбор типа смартапа" на "Canvas App";
