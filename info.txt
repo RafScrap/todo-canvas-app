@@ -1,0 +1,12 @@
+Smartmarket Studio:
+
+m2009548@edu.misis.ru
+22VkontakteSber9
+
+Команды для консоли:
+
+cd todo-canvas-app
+npm start
+
+Cntrl+C - закрыть проект в консоли
+npm start - снова его запустить
