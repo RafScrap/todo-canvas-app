@@ -135,10 +135,11 @@ export class App extends React.Component {
   }
   // выбрать ответ
   choose_answer (action) {
-    handleClick_Answer(action.id, this.state.num)
+    this.handleClick_Answer(action.id);
   }
   //выбрать вопрос
-  handleClick_Answer(i, num) {
+  handleClick_Answer(i) {
+    const num = this.state.num;
     if (test[num].r === i) {
       //this.setState(notes.map((x, index) => (index === num? x.vis0: "hidden")));
       //this.setState(notes.map((x, index) => (index === num? x.vis1: null)));
@@ -190,7 +191,7 @@ export class App extends React.Component {
       );
     }
     else {
-      task = (<p>{this.state.num}</p>);
+      task = ("");
     }
     return (  
       <main className = "container">
