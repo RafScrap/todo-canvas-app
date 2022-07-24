@@ -113,37 +113,30 @@ export class App extends React.Component {
   }
   // добавить вопрос
   add_note (action) {
-    console.log("add");
-    this.setState({
-//      notes: [
-//        ...this.state.notes,
-//        {
-          id: Math.random().toString(36).substring(7),
-          vis0: null,
-          vis1: "hidden",
-          visB0: null,
-          visB1: null,
-          visB2: null, 
-//        }
-//      ],
-      num: this.state.num + 1, 
+    this.setState({      
+      id: Math.random().toString(36).substring(7),
+      visB0: null,
+      visB1: null,
+      visB2: null,
+      a: test[this.state.num + 1].aIsNot, 
+      num: this.state.num + 1,
     });
   }
   // сменить тему (по кнопке)
   done_note (action) {
     this.handleClick_Topic(action.id);
   }
-  // выбрать ответ
+  // выбрать ответ (по голосу)
   choose_answer (action) {
     this.handleClick_Answer(action.id);
   }
-  //выбрать вопрос
+  //выбрать ответ (в целом)
   handleClick_Answer(i) {
     const num = this.state.num;
     if (test[num].r === i) {
       //this.setState(notes.map((x, index) => (index === num? x.vis0: "hidden")));
       //this.setState(notes.map((x, index) => (index === num? x.vis1: null)));
-      this.setState({vis0: "hidden", vis1: null});
+      this.setState({a: test[num].aIs})
     };
     if (i === 0) //this.setState(notes.map((x, index) => (index === num? x.visB0: "hidden")));
     this.setState({visB0: "hidden"});
@@ -175,15 +168,14 @@ export class App extends React.Component {
           </div>
           <div className = "block a-item">
             <img src={girl} alt="avatar_g2.jpg" />
-            <div className={this.state.vis0}> {test[num].aIsNot} </div>
-                 <div className={this.state.vis1}> {test[num].aIs} </div> 
-            <span className={this.state.visB0}>
+            <div> {this.state.a} </div>
+            <span className = {this.state.visB0}>
               <button className="button_test" onClick={() => this.handleClick_Answer(0)}>1. {test[num].v0}</button>
             </span>
-            <span className={this.state.visB1}>
+            <span className = {this.state.visB1}>
               <button className="button_test" onClick={() => this.handleClick_Answer(1)}>2. {test[num].v1}</button>
             </span>
-            <span className={this.state.visB2}>
+            <span className = {this.state.visB2}>
               <button className="button_test" onClick={() => this.handleClick_Answer(2)}>3. {test[num].v2}</button>
             </span>
           </div>
