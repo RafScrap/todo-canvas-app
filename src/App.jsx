@@ -1,8 +1,7 @@
 import React from "react";
 import { createSmartappDebugger, createAssistant} from "@sberdevices/assistant-client";
 import "./App.css";
-import horse from "C:/Users/black/todo-canvas-app/src/horse.jpg";
-import girl from "C:/Users/black/todo-canvas-app/src/avatar_g2.jpg";
+import { TaskItem } from "./TaskItem";
 
 let test = [];
 const test0 = [
@@ -78,6 +77,7 @@ export class App extends React.Component {
       console.log(`assistant.on(start)`, event);
     });
     test = JSON.parse(JSON.stringify(test0));
+    this.handleClick_Answer = this.handleClick_Answer.bind(this);
   }
 
   getStateForAssistant () {
@@ -115,10 +115,10 @@ export class App extends React.Component {
   add_note (action) {
     this.setState({      
       id: Math.random().toString(36).substring(7),
+      a: test[this.state.num + 1].aIsNot, 
       visB0: null,
       visB1: null,
       visB2: null,
-      a: test[this.state.num + 1].aIsNot, 
       num: this.state.num + 1,
     });
   }
@@ -134,16 +134,12 @@ export class App extends React.Component {
   handleClick_Answer(i) {
     const num = this.state.num;
     if (test[num].r === i) {
-      //this.setState(notes.map((x, index) => (index === num? x.vis0: "hidden")));
-      //this.setState(notes.map((x, index) => (index === num? x.vis1: null)));
       this.setState({a: test[num].aIs})
+      console.log(this.state.topic);
     };
-    if (i === 0) //this.setState(notes.map((x, index) => (index === num? x.visB0: "hidden")));
-    this.setState({visB0: "hidden"});
-    if (i === 1) //this.setState(notes.map((x, index) => (index === num? x.visB1: "hidden")));
-    this.setState({visB1: "hidden"});
-    if (i === 2) //this.setState(notes.map((x, index) => (index === num? x.visB2: "hidden")));
-    this.setState({visB2: "hidden"});
+    if (i === 0) this.setState({visB0: "hidden"});
+    if (i === 1) this.setState({visB1: "hidden"});
+    if (i === 2) this.setState({visB2: "hidden"});
   }
   // сменить тему (по кнопке и по голосу) 
   handleClick_Topic(i) {
@@ -158,33 +154,6 @@ export class App extends React.Component {
   }
   render() {
     const num = this.state.num;
-    let task = (<p>{this.state.num}</p>);
-    if (num >= 0 && num < test.length) {
-      task = (
-        <div>
-          <div className = "block q-item"> 
-            <img src={horse} alt="Avatar"/>
-            {test[num].q}
-          </div>
-          <div className = "block a-item">
-            <img src={girl} alt="avatar_g2.jpg" />
-            <div> {this.state.a} </div>
-            <span className = {this.state.visB0}>
-              <button className="button_test" onClick={() => this.handleClick_Answer(0)}>1. {test[num].v0}</button>
-            </span>
-            <span className = {this.state.visB1}>
-              <button className="button_test" onClick={() => this.handleClick_Answer(1)}>2. {test[num].v1}</button>
-            </span>
-            <span className = {this.state.visB2}>
-              <button className="button_test" onClick={() => this.handleClick_Answer(2)}>3. {test[num].v2}</button>
-            </span>
-          </div>
-        </div>
-      );
-    }
-    else {
-      task = ("");
-    }
     return (  
       <main className = "container">
         <header className = "App-header">
@@ -192,14 +161,16 @@ export class App extends React.Component {
         </header>
         <section className = "App-section"> 
           <div className = "topic">
-              <p><button className = "button_topic" onClick={() => this.handleClick_Topic(0, this.state.num)}> {topics[0]} </button></p>
-              <p><button className = "button_topic" onClick={() => this.handleClick_Topic(1, this.state.num)}> {topics[1]} </button></p>
-              <p><button className = "button_topic" onClick={() => this.handleClick_Topic(2, this.state.num)}> {topics[2]} </button></p>
+              <p><button className = "button_topic" onClick={() => this.handleClick_Topic(0)}> {topics[0]} </button></p>
+              <p><button className = "button_topic" onClick={() => this.handleClick_Topic(1)}> {topics[1]} </button></p>
+              <p><button className = "button_topic" onClick={() => this.handleClick_Topic(2)}> {topics[2]} </button></p>
           </div>
           <div className = "theory">
               <p> {theory[this.state.topic]} </p>
           </div>
-          {task}     
+          {num >= 0 && num < test.length? <TaskItem onClick={this.handleClick_Answer} q={test[this.state.num].q} a={this.state.a}
+          v0={test[this.state.num].v0} v1={test[this.state.num].v1} v2={test[this.state.num].v2}
+          visB0={this.state.visB0} visB1={this.state.visB1} visB2={this.state.visB2} /> : ""}
         </section>  
       </main>   
     )
