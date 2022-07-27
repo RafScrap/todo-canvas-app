@@ -2,6 +2,8 @@ import React from "react";
 import { createSmartappDebugger, createAssistant} from "@sberdevices/assistant-client";
 import "./App.css";
 import { TaskItem } from "./TaskItem";
+import { PastTaskItems } from "./PastTaskItems";
+
 
 let test = [];
 const test0 = [
@@ -113,7 +115,7 @@ export class App extends React.Component {
   }
   // добавить вопрос
   add_note (action) {
-    this.setState({      
+    if (this.state.num < test.length - 1) this.setState({      
       id: Math.random().toString(36).substring(7),
       a: test[this.state.num + 1].aIsNot, 
       visB0: null,
@@ -168,9 +170,12 @@ export class App extends React.Component {
           <div className = "theory">
               <p> {theory[this.state.topic]} </p>
           </div>
-          {num >= 0 && num < test.length? <TaskItem onClick={this.handleClick_Answer} q={test[this.state.num].q} a={this.state.a}
-          v0={test[this.state.num].v0} v1={test[this.state.num].v1} v2={test[this.state.num].v2}
-          visB0={this.state.visB0} visB1={this.state.visB1} visB2={this.state.visB2} /> : ""}
+          <div className = "tasks">
+            {num > 0? <PastTaskItems q={test[num - 1].q} a={test[num - 1].aIs} num={num}/> : ""}
+            {num >= 0 && num < test.length? <TaskItem onClick={this.handleClick_Answer} q={test[num].q} a={this.state.a}
+            v0={test[num].v0} v1={test[num].v1} v2={test[num].v2}
+            visB0={this.state.visB0} visB1={this.state.visB1} visB2={this.state.visB2} /> : ""}
+          </div>
         </section>  
       </main>   
     )

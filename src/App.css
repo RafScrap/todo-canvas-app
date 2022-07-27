@@ -19,6 +19,10 @@ body {
   color: white;
 }
 
+.tasks {
+  flex-direction: row;
+}
+
 .block {
   margin: 10px 10px auto;
   border: none;
