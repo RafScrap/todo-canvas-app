@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
-import horse from "C:/Users/black/todo-canvas-app/src/horse.jpg";
-import girl from "C:/Users/black/todo-canvas-app/src/avatar_g2.jpg";
+import horse from "./horse.jpg";
+import girl from "./avatar_g2.jpg";
 
 let items = [];
 
