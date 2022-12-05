@@ -4,43 +4,43 @@ import "./App.css";
 import { TaskItem } from "./TaskItem";
 import { PastTaskItems } from "./PastTaskItems";
 
-
 let test = [];
+
 const test0 = [
-  {q: "Hello! Do you want to go to France?", 
-  aIsNot: "Yes, I ____ to do it!", aIs: "Yes, I want to do it!", v0: "want", v1: "wants", v2:"wanted", r: 0},
-  {q: "Fine! Do you have questions?",
-  aIsNot:"Um... I am sorry, but we _____ have a car!", aIs: "Um... I am sorry, but we don't have a car!",
-  v0: "aren't", v1: "doesn't", v2: "don't", r: 2},
-  {q: "...Stop! Do you know Joan?", aIsNot: "Yes, but she _____ have a car.",
-  aIs: "Yes, but she doesn't have a car.", v0: "isn't", v1: "doesn't", v2: "don't", r: 1},
-  {q: "But she has money.", aIsNot: "..._____ she have much money?",
-  aIs: "...Does she have much money?", v0: "Do", v1: "Is", v2: "Does", r: 2},
-  {q: "Very much", aIsNot: null, aIs: null, v0: null, v1: null, v2: null, r :null}
+  {q: "Hello! Do you want to go to France?", a: "Yes, I ____ to do it!", 
+  variants: ["want", "wants", "wanted"], correct: 0},
+  {q: "Fine! Do you have questions?", a:"Um... I am sorry, but we _____ have a car!",
+  variants: ["aren't", "doesn't", "don't"], correct: 2},
+  {q: "...Stop! Do you know Joan?", a: "Yes, but she _____ have a car.",
+  variants: ["isn't", "doesn't", "don't"], correct: 1},
+  {q: "But she has money.", a: "..._____ she have much money?",
+  variants: ["Do", "Is", "Does"], r: 2},
+  {q: "Very much", a: null, 
+  variants: [null, null, null], correct: null}
 ];
 
 const test1 = [
-  {q: "Alex!", aIsNot: "What? We ____ be at home in five hours.",
-  aIs: "What? We will be at home in five hours.", v0: "are", v1: "won't", v2: "will", r: 2},
-  {q: "But our airplane pilot was killed two hours ago.",
-  aIsNot: "____ we be at home?", aIs: "Won’t we be at home?", v0: "Will", v1: "Won’t", v2: "Don't", r: 1},
-  {q: "Yes, but I have tickets to Moscow.", aIsNot: "____ we be in Moscow in five hours?",
-  aIs: "Will we be in Moscow in five hours?", v0: "Do", v1: "Will", v2: "Don't", r: 1},
-  {q: "Yes, but there are bears in Russia.", aIsNot: "...We ____ be in Moscow.",
-  aIs: "...We won’t be in Moscow.", v0: "won't", v1: "will", v2: "are", r: 0}
+  {q: "Alex!", a: "What? We ____ be at home in five hours.",
+  variants: ["are", "won't", "will"], correct: 2},
+  {q: "But our airplane pilot was killed two hours ago.", a: "____ we be at home?",
+  variants: ["Will", "Won’t", "Don't"], correct: 1},
+  {q: "Yes, but I have tickets to Moscow.", a: "____ we be in Moscow in five hours?",
+  variants: ["Do", "Will", "Don't"], correct: 1},
+  {q: "Yes, but there are bears in Russia.", a: "...We ____ be in Moscow.",
+  variants: ["won't", "will", "are"], correct: 0}
 ];
 
 const test2 = [
-  {q: "I was in New York two years ago!", aIsNot: "Oh, I ____ in this city two years ago!",
-  aIs:"Oh, I lived in this city two years ago!", v0:"am", v1:"live", v2:"lived", r: 2},
-  {q: "And in Washington?", aIsNot: "No, I ____ live in Washington at that time!",
-  aIs: "No, I didn’t live in Washington at that time!", v0: "did", v1: "didn’t", v2: "do", r: 1},
-  {q: "Oh, I was in Washington five years ago.",
-  aIsNot: "____ you live in Washington five years ago?",
-  aIs: "Did you live in Washington five years ago?", v0: "Do", v1: "Did", v2: "Didn't", r: 1},
-  {q: "Yes, but I could live in Moscow.", aIsNot: "Why ____ you choose Moscow?",
-  aIs: "Why didn't you choose Moscow?", v1: "aren't", v2: "did", v3: "didn't", r: 2},
-  {q: "Because bears live in Russia.", aIsNot:"...", aIs:"...", v0: null, v1: null, v2: null, r: null}
+  {q: "I was in New York two years ago!", a: "Oh, I ____ in this city two years ago!",
+  variants: ["am", "live", "lived"], correct: 2},
+  {q: "And in Washington?", a: "No, I ____ live in Washington at that time!",
+  variants: ["did", "didn’t", "do"], correct: 1},
+  {q: "Oh, I was in Washington five years ago.", a: "____ you live in Washington five years ago?",
+  variants: ["Do", "Did", "Didn't"], correct: 1},
+  {q: "Yes, but I could live in Moscow.", a: "Why ____ you choose Moscow?",
+  variants: ["aren't", "did", "didn't"], correct: 2},
+  {q: "Because bears live in Russia.", a: "...", 
+  variants: [null, null, null], correct: null}
 ]
 
 const topics = ["1. Present Simple","2. Future Simple","3. Past Simple"];
@@ -117,7 +117,7 @@ export class App extends React.Component {
   add_note (action) {
     if (this.state.num < test.length - 1) this.setState({      
       id: Math.random().toString(36).substring(7),
-      a: test[this.state.num + 1].aIsNot, 
+      a: test[this.state.num + 1].a, 
       visB0: null,
       visB1: null,
       visB2: null,
@@ -135,8 +135,9 @@ export class App extends React.Component {
   //выбрать ответ (в целом)
   handleClick_Answer(i) {
     const num = this.state.num;
-    if (test[num].r === i) {
-      this.setState({a: test[num].aIs})
+    if (test[num].correct === i) {
+      //var aIs = )
+      this.setState({a: test[num].a.replace(/_*_/, test[num].variants[i])})
       console.log(this.state.topic);
     };
     if (i === 0) this.setState({visB0: "hidden"});
@@ -171,9 +172,9 @@ export class App extends React.Component {
               <p> {theory[this.state.topic]} </p>
           </div>
           <div className = "tasks">
-            {num > 0? <PastTaskItems q={test[num - 1].q} a={test[num - 1].aIs} num={num}/> : ""}
+            {num > 0? <PastTaskItems q={test[num - 1].q} a={test[num - 1].a.replace('_*_', test[num].variants[test[num].correct])} num={num}/> : ""}
             {num >= 0 && num < test.length? <TaskItem onClick={this.handleClick_Answer} q={test[num].q} a={this.state.a}
-            v0={test[num].v0} v1={test[num].v1} v2={test[num].v2}
+            v0={test[num].variants[0]} v1={test[num].variants[1]} v2={test[num].variants[2]}
             visB0={this.state.visB0} visB1={this.state.visB1} visB2={this.state.visB2} /> : ""}
           </div>
         </section>  
