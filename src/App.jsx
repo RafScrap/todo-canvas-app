@@ -172,7 +172,7 @@ export class App extends React.Component {
               <p> {theory[this.state.topic]} </p>
           </div>
           <div className = "tasks">
-            {num > 0? <PastTaskItems q={test[num - 1].q} a={test[num - 1].a.replace(/_*_/, test[num].variants[test[num].correct])} num={num}/> : ""}
+            {num > 0? <PastTaskItems q={test[num - 1].q} a={test[num - 1].a.replace(/_*_/, test[num - 1].variants[test[num - 1].correct])} num={num}/> : ""}
             {num >= 0 && num < test.length? <TaskItem onClick={this.handleClick_Answer} q={test[num].q} a={this.state.a}
             v0={test[num].variants[0]} v1={test[num].variants[1]} v2={test[num].variants[2]}
             visB0={this.state.visB0} visB1={this.state.visB1} visB2={this.state.visB2} /> : ""}
