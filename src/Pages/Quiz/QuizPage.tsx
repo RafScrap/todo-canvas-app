@@ -1,85 +1,28 @@
-import React, {useState} from "react"
-import {useLocation, useParams} from "react-router";
-import ReactMarkdown from 'react-markdown'
+import {useParams} from "react-router";
+import React, {useState} from "react";
 import {
-    Button, Card, CardBody, CardContent, Carousel, CarouselCol, CarouselGridWrapper, CarouselItem,
-    DsplL,
-    H1,
-    H3,
-    H5, PaginationDot, PaginationDots,
-    TextBoxBiggerTitle,
-    TextBoxBigTitle, TextBoxRoot,
-    TextBoxSubTitle,
-    TextL,
-    TextM
+    Button,
+    Card,
+    CardBody,
+    CardContent,
+    Carousel,
+    CarouselCol,
+    CarouselGridWrapper,
+    H1, PaginationDot, PaginationDots,
+    TextBoxRoot, TextL
 } from "@salutejs/plasma-ui";
-import {Link, NavLink} from "react-router-dom";
-import ReactCSSTransitionGroup from 'react-transition-group';
-
-export const TopicPage = () => {
-    let params = useParams();
-    let id = params.id;
-
-    let md = `
-# Present Simple
-
-Lorem ipsum dolor sit amet, **consectetur** adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Senectus et netus et malesuada fames ac turpis.
-Risus nullam eget felis eget nunc. Elit sed vulputate mi sit amet mauris commodo. Et netus et malesuada fames.
-Quam id leo in vitae turpis massa. Quis vel eros donec ac odio tempor. Ac feugiat sed lectus vestibulum mattis ullamcorper. 
-
-
-## Subtitle 1
-
-em nulla pharetra diam sit amet nisl suscipit. Amet nulla facilisi morbi tempus iaculis urna id volutpat lacus. Netus et malesuada fames ac turpis egestas integer eget. Commodo sed egestas egestas fringilla.
-Tellus in hac habitasse platea dictumst vestibulum. Neque volutpat ac tincidunt vitae.
-
-## Subtitle 2
-
-Tincidunt tortor aliquam nulla facilisi cras fermentum odio eu. Gravida quis blandit turpis cursus in hac. Fermentum iaculis eu non diam phasellus vestibulum lorem.
-Ac tortor dignissim convallis aenean et tortor at risus viverra.
-Quam elementum pulvinar etiam non quam lacus suspendisse faucibus. Ut placerat orci nulla pellentesque dignissim enim.
-    
-`
-    return (
-        <>
-            <div>
-                <ReactMarkdown
-                    components={{
-                        h1: ({node}) => <TextBoxBiggerTitle>{node.children[0]["value"]}</TextBoxBiggerTitle>,
-                        h2: ({node}) => <TextBoxBigTitle>{node.children[0]["value"]}</TextBoxBigTitle>,
-                        h3: ({node}) => <TextBoxSubTitle>{node.children[0]["value"]}</TextBoxSubTitle>,
-
-                        p: ({node, ...props}) => {
-                            return <TextM>{node.children[0]["value"]}</TextM>
-                        }
-
-                    }}
-                >{md}</ReactMarkdown>
-            </div>
-            <NavLink to={`/topic/${id}/test`}>
-                <Button style={{
-                    marginTop: '35px',
-                    marginInline: '20%'
-                }}
-
-                        view={"primary"}
-                >
-                    Начать тест
-                </Button>
-            </NavLink>
-
-        </>
-    )
-}
 
 type TestPageSate = {
     current: number,
     result: (number[] | null)[],
 }
 
-export const TestPage = () => {
+export const QuizPage = () => {
     let params = useParams();
     let topicId = params.id;
+
+    //ToDo:
+    //Получать тесты с бэкенда
 
     const tests = [
         {
@@ -218,26 +161,6 @@ export const TestPage = () => {
                     }} key={`item:${i}`} isActive={i === state.current}/>
                 ))}
             </PaginationDots>
-        </>
-    )
-}
-
-type Test = {
-    q: string,
-    a: string,
-    variants: string[],
-    correct: number
-}
-
-export type TestProps = {
-    test: Test
-}
-
-const Test = ({test}: TestProps) => {
-
-    return (
-        <>
-
         </>
     )
 }

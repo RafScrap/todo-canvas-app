@@ -4,8 +4,10 @@ import { Container } from '@salutejs/plasma-ui/components/Grid';
 import "./App.css";
 import {Card, Header, TabItem, Tabs, TextL} from "@salutejs/plasma-ui";
 import {Route, Routes} from "react-router-dom";
-import {ChooseTopicPage} from "./Topics";
-import {TestPage, TopicPage} from "./TopicPage";
+import {ChooseTopicPage} from "./Pages/ChooseTopic/ChooseTopicPage";
+import {TheoryPage} from "./Pages/QuizTheory/TheoryPage";
+import {QuizPage} from "./Pages/Quiz/QuizPage";
+import {QuizResultsPage} from "./Pages/QuizResults/QuizResultsPage";
 
 let test = [
   {
@@ -80,13 +82,16 @@ export const App = () => {
 
   return (
       <>
-        <Header title={`Hello, ${userName}`}>
-        </Header>
-        <Container>
+        <Container style={{
+          minHeight: '100vh'
+        }}>
+          <Header title={`Hello, ${userName}`}>
+          </Header>
           <Routes>
             <Route exact path="/" element={<ChooseTopicPage topics={topics}/>}/>
-            <Route path="/topic/:id" element={<TopicPage/>}/>
-            <Route path="/topic/:id/test" element={<TestPage/>}/>
+            <Route path="/topic/:id" element={<TheoryPage/>}/>
+            <Route path="/topic/:id/test" element={<QuizPage/>}/>
+            <Route path="/results" element={<QuizResultsPage/>}/>
           </Routes>
         </Container>
       </>
