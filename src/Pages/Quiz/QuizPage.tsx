@@ -106,7 +106,7 @@ export const QuizPage = () => {
 
                                         if(state.current + 1 === tests.length)
                                         {
-                                            const right = newResult.filter(a => a.state ==="right")
+                                            const right = newResult.filter(a => a.state ==="right").length
                                             navigate(`/results?total=${newResult.length}&right=${right}`)
                                         }
                                     }}
