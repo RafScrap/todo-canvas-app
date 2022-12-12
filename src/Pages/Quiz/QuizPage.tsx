@@ -11,13 +11,20 @@ import {
     H1, PaginationDot, PaginationDots,
     TextBoxRoot, TextL
 } from "@salutejs/plasma-ui";
+import {useNavigate} from "react-router-dom";
+import {QuizInstance} from "./QuizInstance";
+import {Answer} from "./Entities";
+
+
 
 type TestPageSate = {
     current: number,
-    result: (number[] | null)[],
+    result: Answer[],
 }
 
 export const QuizPage = () => {
+    const navigate = useNavigate();
+
     let params = useParams();
     let topicId = params.id;
 
@@ -69,29 +76,10 @@ export const QuizPage = () => {
 
     const [state, setState] = useState({
         current: 0,
-        result: new Array(tests.length).fill(null)
+        result: [] as Answer[]
     } as TestPageSate)
 
-    //let tests = fetch()
 
-
-    const onAnswered = (event: React.MouseEvent<HTMLElement>, answerId) => {
-        let newResult = state.result
-        if (newResult[state.current] == null)
-        {
-            newResult[state.current] = [answerId]
-        }
-        else
-        {
-            newResult[state.current]?.push(answerId)
-        }
-
-        setState({
-            ...state,
-            result: newResult,
-            current: state.current + (answerId === tests[state.current].correct ? 1 : 0)
-        })
-    }
 
     return (
         <>
@@ -104,37 +92,25 @@ export const QuizPage = () => {
                         <>
                             <CarouselCol sizeS={1} sizeM={1} sizeL={2} sizeXL={3} />
                             <CarouselCol sizeS={4} sizeM={4} sizeL={6} sizeXL={8} >
-                                <Card style={{ marginRight: "0"}} tabIndex={0} outlined scaleOnFocus>
-                                    <CardBody>
-                                        <CardContent>
-                                            <TextBoxRoot style={{
-                                                margin: '5px',
-                                                marginBottom: '15px'
-                                            }}>
-                                                <TextL>{test.q}</TextL>
-                                                <TextL>{test.a}</TextL>
-                                            </TextBoxRoot>
-                                            {
-                                                test.variants.map((v, i) => (
-                                                    <Button style={{
-                                                        margin: '5px',
-                                                    }}
-                                                            view={(() => {
-                                                                if (state.result[testIndex]?.includes(i) && i === test.correct)
-                                                                    return "success";
-                                                                else if (state.result[testIndex]?.includes(i))
-                                                                    return 'critical'
-                                                                return 'secondary'
+                                <QuizInstance
+                                    test={test}
+                                    onChosen={
+                                    (res) => {
+                                        let newResult = state.result
+                                        newResult.push({id: testIndex, state: res} as Answer)
+                                        setState({
+                                            ...state,
+                                            result: newResult,
+                                            current: state.current + 1
+                                        })
 
-                                                            })()}
-                                                            onClick={(event) => onAnswered(event, i)}
-                                                    >{`${i + 1}. ${v}`}</Button>
-                                                ))
-                                            }
-
-                                        </CardContent>
-                                    </CardBody>
-                                </Card>
+                                        if(state.current + 1 === tests.length)
+                                        {
+                                            const right = newResult.filter(a => a.state ==="right")
+                                            navigate(`/results?total=${newResult.length}&right=${right}`)
+                                        }
+                                    }}
+                                />
                             </CarouselCol>
                         </>
                     ))}
@@ -151,9 +127,9 @@ export const QuizPage = () => {
                         width: '30px',
                         height: i === state.current ? '9px' : '6px',
                         background: (() => {
-                            if (state.result[i] == null)
+                            if (state.result[i]?.state == null)
                                 return 'white';
-                            if (state.result[i]![0] === tests[i].correct)
+                            if (state.result[i].state === "right")
                                 return 'green'
                             return 'red'
 
@@ -164,3 +140,4 @@ export const QuizPage = () => {
         </>
     )
 }
+
