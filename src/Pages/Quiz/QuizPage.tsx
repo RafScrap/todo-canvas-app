@@ -11,7 +11,7 @@ import {
     H1, PaginationDot, PaginationDots,
     TextBoxRoot, TextL
 } from "@salutejs/plasma-ui";
-import {useNavigate} from "react-router-dom";
+import {useNavigate, useSearchParams} from "react-router-dom";
 import {QuizInstance} from "./QuizInstance";
 import {Answer} from "./Entities";
 
@@ -26,6 +26,7 @@ export const QuizPage = () => {
     const navigate = useNavigate();
 
     let params = useParams();
+    let [_, setQuery] = useSearchParams();
     let topicId = params.id;
 
     //ToDo:
@@ -107,7 +108,10 @@ export const QuizPage = () => {
                                         if(state.current + 1 === tests.length)
                                         {
                                             const right = newResult.filter(a => a.state ==="right").length
-                                            navigate(`/results?total=${newResult.length}&right=${right}`)
+                                            navigate({
+                                                pathname: `/results`,
+                                                search: `?total=${newResult.length}&right=${right}`
+                                            })
                                         }
                                     }}
                                 />
