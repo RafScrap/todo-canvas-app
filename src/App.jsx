@@ -59,7 +59,7 @@ const test2 = [
   variants: [null, null, null], correct: null}
 ]
 
-const topics = ["1. Present Simple","2. Future Simple","3. Past Simple","3. Past Simple","3. Past Simple","3. Past Simple","3. Past Simple","3. Past Simple"];
+const topics = ["1. Present Simple","2. Future Simple","3. Past Simple","4. Defining relative clauses","3. Past Simple","3. Past Simple","3. Past Simple","3. Past Simple"];
 const theme_ans = [{id: 0, title: "один"}, {id: 1, title: "два"}, {id: 2, title: "три"}];
 const theory = ["Present Simple - настоящее (простое) время. Употребляется для постоянных, регулярных действий. Примеры:",
 "Future Simple", "Past Simple", "",""];
