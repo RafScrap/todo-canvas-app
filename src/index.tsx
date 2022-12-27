@@ -3,11 +3,18 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import { App } from "./App";
 import reportWebVitals from "./reportWebVitals";
+import { DeviceThemeProvider, SSRProvider } from '@salutejs/plasma-ui';
+import { GlobalStyle } from './GlobalStyle';
+import {Router} from "react-router";
+import {BrowserRouter} from "react-router-dom";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <DeviceThemeProvider responsiveTypo={true}>
+            <BrowserRouter>
+                <App />
+                <GlobalStyle />
+            </BrowserRouter>
+    </DeviceThemeProvider>,
   document.getElementById("root")
 );
 

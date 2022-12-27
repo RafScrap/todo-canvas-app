@@ -1,10 +1,26 @@
 import React from "react";
 import { createSmartappDebugger, createAssistant} from "@sberdevices/assistant-client";
+import { Container } from '@salutejs/plasma-ui/components/Grid';
 import "./App.css";
-import { TaskItem } from "./TaskItem";
-import { PastTaskItems } from "./PastTaskItems";
+import {Card, Header, TabItem, Tabs, TextL} from "@salutejs/plasma-ui";
+import {Route, Routes} from "react-router-dom";
+import {ChooseTopicPage} from "./Pages/ChooseTopic/ChooseTopicPage";
+import {TheoryPage} from "./Pages/QuizTheory/TheoryPage";
+import {QuizPage} from "./Pages/Quiz/QuizPage";
+import {QuizResultsPage} from "./Pages/QuizResults/QuizResultsPage";
 
-let test = [];
+let test = [
+  {
+    "q": "Alex!",
+    "a": "What? We ____ be at home in five hours.",
+    "variants": [
+      "are",
+      "won't",
+      "will"
+    ],
+    "correct": 2
+  },
+];
 
 const test0 = [
   {q: "Hello! Do you want to go to France?", a: "Yes, I ____ to do it!", 
@@ -43,10 +59,11 @@ const test2 = [
   variants: [null, null, null], correct: null}
 ]
 
-const topics = ["1. Present Simple","2. Future Simple","3. Past Simple"];
+const topics = ["1. Present Simple","2. Future Simple","3. Past Simple","4. Defining relative clauses","3. Past Simple","3. Past Simple","3. Past Simple","3. Past Simple"];
 const theme_ans = [{id: 0, title: "один"}, {id: 1, title: "два"}, {id: 2, title: "три"}];
 const theory = ["Present Simple - настоящее (простое) время. Употребляется для постоянных, регулярных действий. Примеры:",
 "Future Simple", "Past Simple", "",""];
+
 
 const userName = "Alex";
 //Функция запуска смартапа
@@ -60,24 +77,44 @@ const initializeAssistant = (getState/*: any*/) => {
   }
   return createAssistant({ getState });
 };
+
+export const App = () => {
+
+  return (
+      <>
+        <Container style={{
+          minHeight: '100vh'
+        }}>
+          <Header title={`Hello, ${userName}`}>
+          </Header>
+          <Routes>
+            <Route exact path="/" element={<ChooseTopicPage topics={topics}/>}/>
+            <Route path="/topic/:id" element={<TheoryPage/>}/>
+            <Route path="/topic/:id/test" element={<QuizPage/>}/>
+            <Route path="/results" element={<QuizResultsPage/>}/>
+          </Routes>
+        </Container>
+      </>
+  )
+}
  
-export class App extends React.Component {
+export class Old_App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      notes: [], 
+      notes: [],
       topic: 0,
       num: -1
     }
-    this.assistant = initializeAssistant(() => this.getStateForAssistant() );
-    this.assistant.on("data", (event) => {
-      console.log(`assistant.on(data)`, event);
-      const { action } = event
-      this.dispatchAssistantAction(action);
-    });
-    this.assistant.on("start", (event) => {
-      console.log(`assistant.on(start)`, event);
-    });
+    // this.assistant = initializeAssistant(() => this.getStateForAssistant() );
+    // this.assistant.on("data", (event) => {
+    //   console.log(`assistant.on(data)`, event);
+    //   const { action } = event
+    //   this.dispatchAssistantAction(action);
+    // });
+    // this.assistant.on("start", (event) => {
+    //   console.log(`assistant.on(start)`, event);
+    // });
     test = JSON.parse(JSON.stringify(test0));
     this.handleClick_Answer = this.handleClick_Answer.bind(this);
   }
@@ -115,9 +152,9 @@ export class App extends React.Component {
   }
   // добавить вопрос
   add_note (action) {
-    if (this.state.num < test.length - 1) this.setState({      
+    if (this.state.num < test.length - 1) this.setState({
       id: Math.random().toString(36).substring(7),
-      a: test[this.state.num + 1].a, 
+      a: test[this.state.num + 1].a,
       visB0: null,
       visB1: null,
       visB2: null,
@@ -144,7 +181,7 @@ export class App extends React.Component {
     if (i === 1) this.setState({visB1: "hidden"});
     if (i === 2) this.setState({visB2: "hidden"});
   }
-  // сменить тему (по кнопке и по голосу) 
+  // сменить тему (по кнопке и по голосу)
   handleClick_Topic(i) {
     this.setState({
         topic: i,
@@ -155,30 +192,5 @@ export class App extends React.Component {
     if (i === 1) test = JSON.parse(JSON.stringify(test1));
     if (i === 2) test = JSON.parse(JSON.stringify(test2));
   }
-  render() {
-    const num = this.state.num;
-    return (  
-      <main className = "container">
-        <header className = "App-header">
-          <p>Hello, {userName} </p>
-        </header>
-        <section className = "App-section"> 
-          <div className = "topic">
-              <p><button className = "button_topic" onClick={() => this.handleClick_Topic(0)}> {topics[0]} </button></p>
-              <p><button className = "button_topic" onClick={() => this.handleClick_Topic(1)}> {topics[1]} </button></p>
-              <p><button className = "button_topic" onClick={() => this.handleClick_Topic(2)}> {topics[2]} </button></p>
-          </div>
-          <div className = "theory">
-              <p> {theory[this.state.topic]} </p>
-          </div>
-          <div className = "tasks">
-            {num > 0? <PastTaskItems q={test[num - 1].q} a={test[num - 1].a.replace(/_*_/, test[num - 1].variants[test[num - 1].correct])} num={num}/> : ""}
-            {num >= 0 && num < test.length? <TaskItem onClick={this.handleClick_Answer} q={test[num].q} a={this.state.a}
-            v0={test[num].variants[0]} v1={test[num].variants[1]} v2={test[num].variants[2]}
-            visB0={this.state.visB0} visB1={this.state.visB1} visB2={this.state.visB2} /> : ""}
-          </div>
-        </section>  
-      </main>   
-    )
-  }
+
 }
