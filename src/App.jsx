@@ -98,150 +98,99 @@ export const App = () => {
   )
 }
  
-// export class App extends React.Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = {
-//       notes: [],
-//       topic: 0,
-//       num: -1
-//     }
-//     // this.assistant = initializeAssistant(() => this.getStateForAssistant() );
-//     // this.assistant.on("data", (event) => {
-//     //   console.log(`assistant.on(data)`, event);
-//     //   const { action } = event
-//     //   this.dispatchAssistantAction(action);
-//     // });
-//     // this.assistant.on("start", (event) => {
-//     //   console.log(`assistant.on(start)`, event);
-//     // });
-//     test = JSON.parse(JSON.stringify(test0));
-//     this.handleClick_Answer = this.handleClick_Answer.bind(this);
-//   }
-//
-//   getStateForAssistant () {
-//     const state = {
-//       item_selector: {
-//         items: theme_ans.map(
-//           ({ id, title }, index) => ({
-//             number: index + 1,
-//             id,
-//             title,
-//           })
-//         ),
-//       },
-//     };
-//     return state;
-//   }
-//
-//   dispatchAssistantAction (action) {
-//     if (action) {
-//       switch (action.type) {
-//         case 'add_note':
-//           return this.add_note(action);
-//   // сменить тему
-//         case 'done_note':
-//           return this.done_note(action);
-//   // выбрать ответ
-//         case 'choose_answer':
-//           return this.choose_answer(action);
-//         default:
-//           throw new Error();
-//       }
-//     }
-//   }
-//   // добавить вопрос
-//   add_note (action) {
-//     if (this.state.num < test.length - 1) this.setState({
-//       id: Math.random().toString(36).substring(7),
-//       a: test[this.state.num + 1].a,
-//       visB0: null,
-//       visB1: null,
-//       visB2: null,
-//       num: this.state.num + 1,
-//     });
-//   }
-//   // сменить тему (по кнопке)
-//   done_note (action) {
-//     this.handleClick_Topic(action.id);
-//   }
-//   // выбрать ответ (по голосу)
-//   choose_answer (action) {
-//     this.handleClick_Answer(action.id);
-//   }
-//   //выбрать ответ (в целом)
-//   handleClick_Answer(i) {
-//     const num = this.state.num;
-//     if (test[num].correct === i) {
-//       //var aIs = )
-//       this.setState({a: test[num].a.replace(/_*_/, test[num].variants[i])})
-//       console.log(this.state.topic);
-//     };
-//     if (i === 0) this.setState({visB0: "hidden"});
-//     if (i === 1) this.setState({visB1: "hidden"});
-//     if (i === 2) this.setState({visB2: "hidden"});
-//   }
-//   // сменить тему (по кнопке и по голосу)
-//   handleClick_Topic(i) {
-//     this.setState({
-//         topic: i,
-//         id: null,
-//         num: -1,
-//     });
-//     if (i === 0) test = JSON.parse(JSON.stringify(test0));
-//     if (i === 1) test = JSON.parse(JSON.stringify(test1));
-//     if (i === 2) test = JSON.parse(JSON.stringify(test2));
-//   }
-//   render() {
-//     const num = this.state.num;
-//     return (
-//         <Container>
-//           <Header
-//                   title={`Hello, ${userName}`}
-//           >
-//           </Header>
-//           <div>
-//             <Tabs size={"l"}
-//                   pilled={false}
-//                   style={{
-//
-//                   }}
-//             >
-//               {topics.map((_, i) => (
-//                   <TabItem
-//                       key={`topic:${i}`}
-//                       isActive={this.state.topic === i}
-//                       tabIndex={0}
-//                       onClick={() => this.handleClick_Topic(i)}
-//                   >
-//                     {topics[i]}
-//                   </TabItem>))
-//               }
-//             </Tabs>
-//           </div>
-//           <div>
-//             <Card>
-//
-//             </Card>
-//             <TextL>
-//               {theory[this.state.topic]}
-//             </TextL>
-//           </div>
-//           <section className = "App-section">
-//             <div className = "topic">
-//
-//             </div>
-//             <div className = "theory">
-//               <p> {theory[this.state.topic]} </p>
-//             </div>
-//             <div className = "tasks">
-//               {num > 0? <PastTaskItems q={test[num - 1].q} a={test[num - 1].a.replace(/_*_/, test[num - 1].variants[test[num - 1].correct])} num={num}/> : ""}
-//               {num >= 0 && num < test.length? <TaskItem onClick={this.handleClick_Answer} q={test[num].q} a={this.state.a}
-//                                                         v0={test[num].variants[0]} v1={test[num].variants[1]} v2={test[num].variants[2]}
-//                                                         visB0={this.state.visB0} visB1={this.state.visB1} visB2={this.state.visB2} /> : ""}
-//             </div>
-//           </section>
-//         </Container>
-//     )
-//   }
-// }
+export class Old_App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      notes: [],
+      topic: 0,
+      num: -1
+    }
+    // this.assistant = initializeAssistant(() => this.getStateForAssistant() );
+    // this.assistant.on("data", (event) => {
+    //   console.log(`assistant.on(data)`, event);
+    //   const { action } = event
+    //   this.dispatchAssistantAction(action);
+    // });
+    // this.assistant.on("start", (event) => {
+    //   console.log(`assistant.on(start)`, event);
+    // });
+    test = JSON.parse(JSON.stringify(test0));
+    this.handleClick_Answer = this.handleClick_Answer.bind(this);
+  }
+
+  getStateForAssistant () {
+    const state = {
+      item_selector: {
+        items: theme_ans.map(
+          ({ id, title }, index) => ({
+            number: index + 1,
+            id,
+            title,
+          })
+        ),
+      },
+    };
+    return state;
+  }
+
+  dispatchAssistantAction (action) {
+    if (action) {
+      switch (action.type) {
+        case 'add_note':
+          return this.add_note(action);
+  // сменить тему
+        case 'done_note':
+          return this.done_note(action);
+  // выбрать ответ
+        case 'choose_answer':
+          return this.choose_answer(action);
+        default:
+          throw new Error();
+      }
+    }
+  }
+  // добавить вопрос
+  add_note (action) {
+    if (this.state.num < test.length - 1) this.setState({
+      id: Math.random().toString(36).substring(7),
+      a: test[this.state.num + 1].a,
+      visB0: null,
+      visB1: null,
+      visB2: null,
+      num: this.state.num + 1,
+    });
+  }
+  // сменить тему (по кнопке)
+  done_note (action) {
+    this.handleClick_Topic(action.id);
+  }
+  // выбрать ответ (по голосу)
+  choose_answer (action) {
+    this.handleClick_Answer(action.id);
+  }
+  //выбрать ответ (в целом)
+  handleClick_Answer(i) {
+    const num = this.state.num;
+    if (test[num].correct === i) {
+      //var aIs = )
+      this.setState({a: test[num].a.replace(/_*_/, test[num].variants[i])})
+      console.log(this.state.topic);
+    };
+    if (i === 0) this.setState({visB0: "hidden"});
+    if (i === 1) this.setState({visB1: "hidden"});
+    if (i === 2) this.setState({visB2: "hidden"});
+  }
+  // сменить тему (по кнопке и по голосу)
+  handleClick_Topic(i) {
+    this.setState({
+        topic: i,
+        id: null,
+        num: -1,
+    });
+    if (i === 0) test = JSON.parse(JSON.stringify(test0));
+    if (i === 1) test = JSON.parse(JSON.stringify(test1));
+    if (i === 2) test = JSON.parse(JSON.stringify(test2));
+  }
+
+}
