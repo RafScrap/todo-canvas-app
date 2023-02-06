@@ -1,19 +1,9 @@
 import React, {useState} from "react"
 import {useParams} from "react-router";
-import ReactMarkdown from 'react-markdown'
-import {
-    Button, Card, CardBody, CardContent, Carousel, CarouselCol, CarouselGridWrapper, H1,
-    PaginationDot, PaginationDots,
-    TextBoxBiggerTitle,
-    TextBoxBigTitle, TextBoxRoot,
-    TextBoxSubTitle,
-    TextL,
-    TextM
-} from "@salutejs/plasma-ui";
 import {useNavigate} from "react-router-dom";
 import {MarkdownBox} from "../../Components/MarkdownBox";
 
-export const TheoryPage = () => {
+export const Theory = () => {
     const navigate = useNavigate();
 
     let params = useParams();
@@ -42,17 +32,6 @@ Quam elementum pulvinar etiam non quam lacus suspendisse faucibus. Ut placerat o
     return (
         <>
             <MarkdownBox markdown={md}/>
-            <Button style={{
-                marginTop: '35px',
-                marginInline: '20%'
-            }}
-
-                    view={"primary"}
-                    onClick={() => navigate(`/topic/${id}/test`)}
-            >
-                Начать тест
-            </Button>
-
         </>
     )
 }

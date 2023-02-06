@@ -5,7 +5,7 @@ import "./App.css";
 import {Card, Header, TabItem, Tabs, TextL} from "@salutejs/plasma-ui";
 import {Route, Routes} from "react-router-dom";
 import {ChooseTopicPage} from "./Pages/ChooseTopic/ChooseTopicPage";
-import {TheoryPage} from "./Pages/QuizTheory/TheoryPage";
+import {Theory} from "./Pages/Quiz/Theory";
 import {QuizPage} from "./Pages/Quiz/QuizPage";
 import {QuizResultsPage} from "./Pages/QuizResults/QuizResultsPage";
 
@@ -89,7 +89,7 @@ export const App = () => {
           </Header>
           <Routes>
             <Route exact path="/" element={<ChooseTopicPage topics={topics}/>}/>
-            <Route path="/topic/:id" element={<TheoryPage/>}/>
+            <Route path="/topic/:id" element={<QuizPage/>}/>
             <Route path="/topic/:id/test" element={<QuizPage/>}/>
             <Route path="/results" element={<QuizResultsPage/>}/>
           </Routes>
