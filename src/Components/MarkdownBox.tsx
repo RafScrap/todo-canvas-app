@@ -1,6 +1,9 @@
 import {TextBoxBiggerTitle, TextBoxBigTitle, TextBoxSubTitle, TextM} from "@salutejs/plasma-ui";
 import ReactMarkdown from "react-markdown";
 import React from "react";
+import remarkGfm from 'remark-gfm'
+import rehypeRaw from 'rehype-raw'
+import rehypeSanitize from 'rehype-sanitize'
 
 type MarkdownBoxProps = {
     markdown: string
@@ -20,9 +23,13 @@ export const MarkdownBox = ({markdown} : MarkdownBoxProps) => {
 
                     p: ({node, ...props}) => {
                         return <TextM>{node.children[0]["value"]}</TextM>
-                    }
+                    },
+
 
                 }}
+                remarkPlugins={[remarkGfm]}
+                rehypePlugins={[rehypeRaw, rehypeSanitize]}
+
             >{markdown}</ReactMarkdown>
         </>
     )

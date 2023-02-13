@@ -33,11 +33,19 @@ export const QuizPage = () => {
                     overflowX: "hidden",
                     height: "80vh",
                 }}>
-                    {state.activePage === 0 ?
+
+                    <div hidden={state.activePage !== 0}>
                         <Theory></Theory>
-                    :
-                        <Dialogue topic={topicId} id={state.activePage - 1}></Dialogue>
-                    }
+                    </div>
+
+                    {items.map((item, index) => (
+                        <div hidden={state.activePage - 1 != index}>
+                            <Dialogue topic={topicId} id={index}></Dialogue>
+                        </div>
+
+                    ))}
+
+
 
                 </div>
 

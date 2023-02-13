@@ -7,14 +7,17 @@ import { DeviceThemeProvider, SSRProvider } from '@salutejs/plasma-ui';
 import { GlobalStyle } from './GlobalStyle';
 import {Router} from "react-router";
 import {BrowserRouter} from "react-router-dom";
+import {RecoilRoot} from 'recoil'
 
 ReactDOM.render(
-    <DeviceThemeProvider responsiveTypo={true}>
+    <RecoilRoot>
+        <DeviceThemeProvider responsiveTypo={true}>
             <BrowserRouter>
                 <App />
                 <GlobalStyle />
             </BrowserRouter>
-    </DeviceThemeProvider>,
+        </DeviceThemeProvider>
+    </RecoilRoot>,
   document.getElementById("root")
 );
 

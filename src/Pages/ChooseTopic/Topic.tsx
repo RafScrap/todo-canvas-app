@@ -30,9 +30,7 @@ export const Topic = ({name, id} : TopicProps) => {
                 <CardBody>
                     <CardContent>
                         <TextBoxRoot>
-                            <TextBoxBigTitle>Подзаголовок</TextBoxBigTitle>
                             <TextBoxBiggerTitle>{name}</TextBoxBiggerTitle>
-                            <TextBoxSubTitle>Подпись</TextBoxSubTitle>
                         </TextBoxRoot>
                             <Button
                                 text="Начать"

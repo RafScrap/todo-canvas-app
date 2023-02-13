@@ -11,6 +11,8 @@ export const ChooseTopicPage = ({topics} : TopicsPageProps) => {
     //ToDo:
     //Получать топики с бэкенда
 
+
+
     return (
         <>
             <Row>
