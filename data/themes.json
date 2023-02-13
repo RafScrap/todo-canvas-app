@@ -1,14 +1,14 @@
 [
   {
-    topic: "Present Simple",
-    id: "present-simple"
+    "topic": "Present Simple",
+    "id": "present-simple"
   },
   {
-    topic: "Present Continuous",
-    id: "present-сontinuous"
+    "topic": "Present Continuous",
+    "id": "present-сontinuous"
   },
   {
-    topic: "Present Perfect",
-    id: "present-perfect"
+    "topic": "Present Perfect",
+    "id": "present-perfect"
   },
 ]
