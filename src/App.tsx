@@ -9,6 +9,8 @@ import {Theory} from "./Pages/Quiz/Theory";
 import {QuizPage} from "./Pages/Quiz/QuizPage";
 import {QuizResultsPage} from "./Pages/QuizResults/QuizResultsPage";
 import {initializeAssistant} from "./Assistant/Assistant";
+import {ChooseTopicPageAssistant} from "./Assistant/ChooseTopicPageAssistant";
+import {QuizPageAssistant} from "./Assistant/QuizPageAssistant";
 
 let test = [
   {
@@ -69,22 +71,6 @@ const theory = ["Present Simple - настоящее (простое) время
 const userName = "Alex";
 
 export const App = memo(() => {
-  const assistantStateRef = useRef<AssistantAppState>();
-  const assistantRef = useRef<ReturnType<typeof createAssistant>>();
-
-  useEffect(() => {
-    try {
-      assistantRef.current = initializeAssistant(() => assistantStateRef.current);
-
-      assistantRef.current.on('data', ({ action }: any) => {
-      });
-    }
-    catch (e)
-    {
-      console.error(e);
-    }
-  }, []);
-
   return (
       <>
         <Container style={{
@@ -93,8 +79,17 @@ export const App = memo(() => {
           <Header title={`Hello, ${userName}`}>
           </Header>
           <Routes>
-            <Route path="/" element={<ChooseTopicPage topics={topics}/>}/>
-            <Route path="/topic/:id" element={<QuizPage/>}/>
+            <Route path="/" element={
+              <ChooseTopicPageAssistant>
+                <ChooseTopicPage/>
+              </ChooseTopicPageAssistant>
+            }/>
+
+            <Route path="/topic/:id" element={
+              <QuizPageAssistant>
+                <QuizPage/>
+              </QuizPageAssistant>
+            }/>
           </Routes>
         </Container>
       </>

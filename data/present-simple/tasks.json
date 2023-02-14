@@ -1,0 +1,134 @@
+[
+  {
+    "phrases": [
+      {
+        "question": "Alex!",
+        "reply": "What? We ____ be at home in five hours.",
+        "answers": [
+          "are",
+          "won't",
+          "will"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "question": "But our airplane pilot was killed two hours ago.",
+        "reply": "____ we be at home?",
+        "answers": [
+          "Will",
+          "Won’t",
+          "Don't"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "question": "Yes, but I have tickets to Moscow.",
+        "reply": "____ we be in Moscow in five hours?",
+        "answers": [
+          "Do",
+          "Will",
+          "Don't"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "question": "Yes, but there are bears in Russia.",
+        "reply": "...We ____ be in Moscow.",
+        "answers": [
+          "won't",
+          "will",
+          "are"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "Alex!",
+        "reply": "What? We ____ be at home in five hours.",
+        "answers": [
+          "are",
+          "won't",
+          "will"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "question": "But our airplane pilot was killed two hours ago.",
+        "reply": "____ we be at home?",
+        "answers": [
+          "Will",
+          "Won’t",
+          "Don't"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "question": "Yes, but I have tickets to Moscow.",
+        "reply": "____ we be in Moscow in five hours?",
+        "answers": [
+          "Do",
+          "Will",
+          "Don't"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "question": "Yes, but there are bears in Russia.",
+        "reply": "...We ____ be in Moscow.",
+        "answers": [
+          "won't",
+          "will",
+          "are"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "Alex!",
+        "reply": "What? We ____ be at home in five hours.",
+        "answers": [
+          "are",
+          "won't",
+          "will"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "question": "But our airplane pilot was killed two hours ago.",
+        "reply": "____ we be at home?",
+        "answers": [
+          "Will",
+          "Won’t",
+          "Don't"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "question": "Yes, but I have tickets to Moscow.",
+        "reply": "____ we be in Moscow in five hours?",
+        "answers": [
+          "Do",
+          "Will",
+          "Don't"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "question": "Yes, but there are bears in Russia.",
+        "reply": "...We ____ be in Moscow.",
+        "answers": [
+          "won't",
+          "will",
+          "are"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  }
+]

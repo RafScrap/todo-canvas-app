@@ -6,12 +6,6 @@ export const dialoguesStateAtom = atom({
     default: [] as DialogueState[]
 })
 
-const dialoguesStateSelector = selector({
-    key: 'dialoguesStateSelector',
-    get: ({get}) => ({
-
-    })
-})
 
 export type TopicAndId = {
     topic: string,

@@ -8,15 +8,18 @@ import { GlobalStyle } from './GlobalStyle';
 import {Router} from "react-router";
 import {BrowserRouter} from "react-router-dom";
 import {RecoilRoot} from 'recoil'
+import {Assistant} from "./Assistant/Assistant";
 
 ReactDOM.render(
     <RecoilRoot>
-        <DeviceThemeProvider responsiveTypo={true}>
-            <BrowserRouter>
-                <App />
-                <GlobalStyle />
-            </BrowserRouter>
-        </DeviceThemeProvider>
+        <Assistant>
+            <DeviceThemeProvider responsiveTypo={true}>
+                <BrowserRouter>
+                    <App />
+                    <GlobalStyle />
+                </BrowserRouter>s
+            </DeviceThemeProvider>
+        </Assistant>
     </RecoilRoot>,
   document.getElementById("root")
 );
