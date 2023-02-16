@@ -5,10 +5,46 @@
   },
   {
     "topic": "Present Continuous",
-    "id": "present-сontinuous"
+    "id": "present-continuous"
   },
   {
     "topic": "Present Perfect",
     "id": "present-perfect"
+  },
+  {
+    "topic": "Present Perfect Continuous",
+    "id": "present-perfect-continuous"
+  },
+  {
+    "topic": "Past Simple",
+    "id": "past-simple"
+  },
+  {
+    "topic": "Past Continuous",
+    "id": "past-continuous"
+  },
+  {
+    "topic": "Past Perfect",
+    "id": "past-perfect"
+  },
+  {
+    "topic": "Past Perfect Continuous",
+    "id": "past-perfect-continuous"
+  },
+  {
+    "topic": "Future Simple",
+    "id": "future-simple"
+  },
+  {
+    "topic": "Future Continuous",
+    "id": "future-continuous"
+  },
+  {
+    "topic": "Future Perfect",
+    "id": "future-perfect"
+  },
+  {
+    "topic": "Future Perfect Continuous",
+    "id": "future-perfect-continuous"
   }
 ]

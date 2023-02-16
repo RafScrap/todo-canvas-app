@@ -12,6 +12,7 @@ import {from} from "linq-to-typescript";
 type QuizPageState = {
     activePage: number
     totalTasks: number
+    loaded: boolean
 }
 
 export const QuizPage = () => {
@@ -21,11 +22,13 @@ export const QuizPage = () => {
     const [state, setState] = useState({
         activePage: 0,
         totalTasks: 0,
+        loaded: false,
     } as QuizPageState)
 
     const [dialogues, setDialogues] = useRecoilState(dialoguesStateAtom);
 
     useEffect(() => {
+        if(!state.loaded)
         fetch(`https://raw.githubusercontent.com/RafScrap/todo-canvas-app/main/data/${topicId}/tasks.json`)
             .then(async (resp) => {
                 let tasks = (await resp.json() as any[]).map((e, index) => ({
@@ -40,7 +43,8 @@ export const QuizPage = () => {
                 setDialogues(dialogues.filter(d => d.topic !== topicId).concat(tasks))
                 setState({
                     ...state,
-                    totalTasks: tasks.length
+                    totalTasks: tasks.length,
+                    loaded: true
                 })
             })
     })

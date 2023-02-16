@@ -19,17 +19,16 @@ export type DialogueProps = {
 export const Dialogue = ({topic, id}: DialogueProps) => {
 
     const [state, setState] = useState({
-        loaded: false
+
     });
     const dialoguesState = useRecoilValue(getDialogByTopicAndId({id, topic}))
     const setDialogueState = useSetRecoilState(getDialogByTopicAndId({id, topic}));
-
 
     let showPhrasesCount = from(dialoguesState?.phrases ?? []).count(x => x.answers.selected !== undefined) + 1;
 
     return (
         <>
-            {state.loaded ?
+            {
                 dialoguesState?.phrases.slice(0, showPhrasesCount).map((p, index) => (
                     <Row>
                         <Col sizeS={3} sizeM={5} sizeL={6} sizeXL={9}>
@@ -48,8 +47,6 @@ export const Dialogue = ({topic, id}: DialogueProps) => {
 
                     </Row>
                 ))
-                :
-                <RectSkeleton height={"100%"} width={"100%"}/>
             }
 
 

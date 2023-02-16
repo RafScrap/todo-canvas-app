@@ -15,6 +15,7 @@ export const Theory = () => {
     })
 
     useEffect(() => {
+        if(!state.loaded)
         fetch(`https://raw.githubusercontent.com/RafScrap/todo-canvas-app/main/data/${id}/theory.md`)
             .then(async (resp) => {
                 const md = await resp.text()
@@ -32,9 +33,10 @@ export const Theory = () => {
     return (
         <>
             {state.loaded ?
-                <RectSkeleton width={"100%"} height={"300px"}/>
+                <MarkdownBox markdown={state.markdown}/>
                 :
-                <MarkdownBox markdown={state.markdown}/>}
+                <RectSkeleton width={"100%"} height={"300px"}/>
+                }
         </>
     )
 }
