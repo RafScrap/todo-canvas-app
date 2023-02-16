@@ -1,10 +1,10 @@
 import {AssistantAppState, createAssistant, createSmartappDebugger} from "@sberdevices/assistant-client";
 import React, {useEffect, useRef} from "react";
 
-export const initializeAssistant = (getState: any) => {
+export const initializeAssistant = (getState) => {
     if (process.env.NODE_ENV === 'development') {
         return createSmartappDebugger({
-            token: process.env.REACT_APP_TOKEN ?? "",
+            token: process.env.REACT_APP_TOKEN!,
             initPhrase: `Запусти ${process.env.REACT_APP_SMARTAPP}`,
             getState,
             nativePanel: {

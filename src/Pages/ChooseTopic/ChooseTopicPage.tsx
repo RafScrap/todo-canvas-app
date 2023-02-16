@@ -29,7 +29,7 @@ export const ChooseTopicPage = () => {
                         loaded: true
                     })
                 })
-    }, [])
+    }, [state])
 
     return (
         <>

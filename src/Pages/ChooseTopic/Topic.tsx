@@ -13,25 +13,32 @@ import {
 import {Link, useNavigate} from "react-router-dom";
 
 
-
-
 type TopicProps = {
     id?: string,
     name?: string,
 }
 
-export const Topic = ({name, id} : TopicProps) => {
+export const Topic = ({name, id}: TopicProps) => {
 
     const nav = useNavigate();
 
     return (
-        <div  style={{}}>
-            <Card style={{ width: '90%', marginTop: '1em' }}  tabIndex={0} outlined scaleOnFocus>
+        <div style={{height: "100%"}}>
+            <Card style={{width: '90%', marginTop: '1em', height: "90%"}} tabIndex={0} outlined scaleOnFocus>
                 <CardBody>
-                    <CardContent>
-                        <TextBoxRoot>
+                    <CardContent style={{
+                        minHeight: "100%",
+                    }}>
+                        <TextBoxRoot style={{
+                            paddingBottom: '50px'
+                        }}>
                             <TextBoxBiggerTitle>{name}</TextBoxBiggerTitle>
                         </TextBoxRoot>
+                        <div style={{
+                            position: "absolute",
+                            bottom: "1em",
+                            width: "calc(100% - 32px)"
+                        }}>
                             <Button
                                 text="Начать"
                                 view="primary"
@@ -39,12 +46,18 @@ export const Topic = ({name, id} : TopicProps) => {
                                 scaleOnInteraction={false}
                                 outlined={false}
                                 stretch
-                                style={{ marginTop: '1em' }}
+                                style={{
+                                    marginTop: '1em',
+
+                                }}
                                 tabIndex={-1}
                                 onClick={() => nav(`/topic/${id}`)}
                             />
+                        </div>
+
 
                     </CardContent>
+
                 </CardBody>
             </Card>
         </div>
