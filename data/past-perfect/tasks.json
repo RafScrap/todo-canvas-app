@@ -1,0 +1,62 @@
+[
+  {
+    "phrases": [
+      {
+        "question": "Dis you enjoy the party?",
+        "reply": "Not at all. I ___ to such a party before. It was a disaster.",
+        "answers": [
+          "had never been"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "question": "A disaster?",
+        "reply": "Exactly. When I arrived at the party, they ____ all the sausages. There was nothing to eat",
+        "answers": [
+          "had eaten"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "question": "____ enough sausages for everyone?",
+        "reply": "No, they hadn't. The house was full of people I ____ before.",
+        "answers": [
+          "Hadn't they bought, had never met"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "question": "So you were hungry all afternoon?",
+        "reply": "I was pretty hungry. I ____ anything before I left home.",
+        "answers": [
+          "hadn't eaten"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "question": "Did you dance?",
+        "reply": "No, I didn't. There was a DJ at the party, but after he ____ a couple of songs, he disappeared",
+        "answers": [
+          "had played"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "question": "What did you do then?",
+        "reply": "Fortunately, they ____ all the wine before I came. I had two or three glasses of red wine and went home. ",
+        "answers": [
+          "had not drunk"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "question": "Mark? You told me you ____ anything to eat. You must have got drunk!",
+        "reply": "To tell the truth, when I ____ the third glass, I felt a little bit dizzy. But I am all right now. Am I not?",
+        "answers": [
+          "had not had, had finished"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  }
+]
