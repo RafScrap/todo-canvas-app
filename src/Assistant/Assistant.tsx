@@ -1,5 +1,5 @@
-import {AssistantAppState, createAssistant, createSmartappDebugger} from "@sberdevices/assistant-client";
-import React, {useEffect, useRef} from "react";
+import {AssistantAppState, createAssistant, createSmartappDebugger} from "@salutejs/client";
+import React, {useEffect, useRef, useState} from "react";
 
 export const initializeAssistant = (getState) => {
     if (process.env.NODE_ENV === 'development') {
@@ -22,25 +22,18 @@ export type AssistantPageProps = {
     assistant: ReturnType<typeof useRef<ReturnType<typeof createAssistant>>>
 }
 
-export const Assistant: React.FC = ({children}) => {
+export const assistant = initializeAssistant(() => { });
 
-    const assistantStateRef = useRef<AssistantAppState>({});
-    const assistantRef = useRef<ReturnType<typeof createAssistant>>();
+export const Assistant: React.FC = ({children}) => {
+    const [state,setState] = useState({
+        loaded: false
+    });
 
     useEffect(() => {
-        try {
-            assistantRef.current = initializeAssistant(() => assistantStateRef.current);
-
-            assistantRef.current.on('start', () => {
-                console.log("Ассисент запущен")
-            });
-        }
-        catch (e)
-        {
-            console.error(e);
-        }
-    }, []);
-
+        assistant.on("start", () => {
+            console.log(`assistant.on(start)`);
+        });
+    })
 
     return (
         <>
@@ -48,3 +41,30 @@ export const Assistant: React.FC = ({children}) => {
         </>
     )
 }
+
+// export const Assistant: React.FC = ({children}) => {
+//
+//     const assistantStateRef = useRef<AssistantAppState>({});
+//     const assistantRef = useRef<ReturnType<typeof createAssistant>>();
+//
+//     useEffect(() => {
+//         try {
+//             assistantRef.current = initializeAssistant(() => assistantStateRef.current);
+//
+//             assistantRef.current.on('start', () => {
+//                 console.log("Ассисент запущен")
+//             });
+//         }
+//         catch (e)
+//         {
+//             console.error(e);
+//         }
+//     }, []);
+//
+//
+//     return (
+//         <>
+//             {children}
+//         </>
+//     )
+// }

@@ -6,6 +6,15 @@ export const dialoguesStateAtom = atom({
     default: [] as DialogueState[]
 })
 
+export const quizPageStateAtom = atom({
+    key: 'quizPageStateAtom',
+    default: [] as QuizPageState[]
+})
+
+export type QuizPageState =  {
+    topic: string
+    activePage: number
+}
 
 export type TopicAndId = {
     topic: string,

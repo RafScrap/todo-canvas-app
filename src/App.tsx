@@ -1,5 +1,5 @@
 import React, {memo, useEffect, useRef, useState} from "react";
-import {createSmartappDebugger, createAssistant, AssistantAppState} from "@sberdevices/assistant-client";
+import {createSmartappDebugger, createAssistant, AssistantAppState} from "@salutejs/client";
 import {Container} from '@salutejs/plasma-ui/components/Grid';
 import "./App.css";
 import {Card, Header, TabItem, Tabs, TextL} from "@salutejs/plasma-ui";

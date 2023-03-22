@@ -6,29 +6,31 @@ import {useParams} from "react-router";
 import {Theory} from "./Theory";
 import {Answer, AnswersRow, DialogueState, PhraseEntity} from "./Entities";
 import {useRecoilState} from "recoil";
-import {dialoguesStateAtom} from "../../RecoilStorage";
+import {dialoguesStateAtom, quizPageStateAtom} from "../../RecoilStorage";
 import {from} from "linq-to-typescript";
+import {assistant} from "../../Assistant/Assistant";
 
 type QuizPageState = {
-    activePage: number
     totalTasks: number
     loaded: boolean
+    activePage: number
 }
 
 export const QuizPage = () => {
     let params = useParams();
     let topicId = params.id!;
 
+    const [dialogues, setDialogues] = useRecoilState(dialoguesStateAtom);
+
     const [state, setState] = useState({
         activePage: 0,
-        totalTasks: 0,
+        totalTasks: from(dialogues).count(x=> x.topic==topicId),
         loaded: false,
     } as QuizPageState)
 
-    const [dialogues, setDialogues] = useRecoilState(dialoguesStateAtom);
 
     useEffect(() => {
-        if(!state.loaded)
+        if(!state.loaded && from(dialogues).count(x=> x.topic==topicId) === 0)
         fetch(`https://raw.githubusercontent.com/RafScrap/todo-canvas-app/main/data/${topicId}/tasks.json`)
             .then(async (resp) => {
                 let tasks = (await resp.json() as any[]).map((e, index) => ({
@@ -47,7 +49,37 @@ export const QuizPage = () => {
                     loaded: true
                 })
             })
+
+
     })
+
+    useEffect(() => {
+        assistant.on("data", (event : any) => {
+            console.log(`assistant.on(data)`, event);
+            if(event)
+            {
+                try{
+                    // @ts-ignore
+                    let action = event["action"];
+                    switch (event.type)
+                    {
+                        case 'smart_app_data':
+                            switch (action.type)
+                            {
+                                case "set_quiz_page":
+                                    setState({...state, activePage: action.id})
+                                    break;
+                                default:
+                                    break;
+                            }
+                            break;
+                    }
+                } catch (e) {
+                    console.error(e);
+                }
+            }
+        });
+    }, []);
 
     let items = [{label: "Теория"}].concat(Array.from(Array(state.totalTasks).keys()).map(i => ({label: `Диалог ${i + 1}`})));
 
