@@ -1,0 +1,62 @@
+[
+  {
+    "phrases": [
+      {
+        "question": "Samuel, I hear you ____ eighteen years old last week.",
+        "response": "Yes, I ____. I had a big birthday party.",
+        "answers": [
+          "were + was"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "question": "And when ____ you born?",
+        "response": "I ____ born on 30 June.",
+        "answers": [
+          "were + was"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "question": "____ your birthday party on the same day?",
+        "response": "No, it ____ . It ____ a week later.",
+        "answers": [
+          "was + wasn't + was"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "question": "Why ____ your birthday party on the same day?",
+        "response": "I have a twin brother and he ____ at home. He ____ in France.",
+        "answers": [
+          "wasn't + wasn't + was"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "question": "____ you and your brother born at the same time?",
+        "response": "No, we ____. I ____ born one hour after him.",
+        "answers": [
+          "were + weren't + was"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "question": "____ your parents happy to have twins?",
+        "response": "Yes, they ____. But our grandma ____. She ____ shocked.",
+        "answers": [
+          "were + were + wasn't + was"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "question": "And what about your grandpa. ____ he shocked, too?",
+        "response": "No, he ____. My grandpa is always relaxed.",
+        "answers": [
+          "was + wasn't"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  }
+]
