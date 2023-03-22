@@ -13,7 +13,6 @@ import {assistant} from "../../Assistant/Assistant";
 type QuizPageState = {
     totalTasks: number
     loaded: boolean
-    activePage: number
 }
 
 export const QuizPage = () => {
@@ -23,10 +22,14 @@ export const QuizPage = () => {
     const [dialogues, setDialogues] = useRecoilState(dialoguesStateAtom);
 
     const [state, setState] = useState({
-        activePage: 0,
+
         totalTasks: from(dialogues).count(x=> x.topic==topicId),
         loaded: false,
     } as QuizPageState)
+
+    const [pageState, setPageState] = useState({
+        activePage: 0
+    })
 
 
     useEffect(() => {
@@ -67,7 +70,7 @@ export const QuizPage = () => {
                             switch (action.type)
                             {
                                 case "set_quiz_page":
-                                    setState({...state, activePage: action.id})
+                                    setPageState({...pageState, activePage: action.id})
                                     break;
                                 default:
                                     break;
@@ -92,12 +95,12 @@ export const QuizPage = () => {
                 height: "80vh",
             }}>
 
-                <div hidden={state.activePage !== 0}>
+                <div hidden={pageState.activePage !== 0}>
                     <Theory></Theory>
                 </div>
 
                 {items.map((item, index) => (
-                    <div hidden={state.activePage - 1 !== index}>
+                    <div hidden={pageState.activePage - 1 !== index}>
                         <Dialogue topic={topicId} id={index}></Dialogue>
                     </div>
 
@@ -107,8 +110,8 @@ export const QuizPage = () => {
 
 
             <div style={{zIndex: 0, position: 'relative'}}>
-                <TabsController items={items} index={state.activePage}
-                                onIndexChange={(i) => setState({...state, activePage: i})} autoscroll/>
+                <TabsController items={items} index={pageState.activePage}
+                                onIndexChange={(i) => setPageState({...pageState, activePage: i})} autoscroll/>
             </div>
 
         </>
