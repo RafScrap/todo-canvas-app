@@ -1,0 +1,126 @@
+[
+  {
+    "phrases": [
+      {
+        "question": "Why are you so tired? ",
+        "reply": "Because I ____ the wheels on my car.",
+        "answers": [
+          "have been replacing"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "Your French is perfect. ",
+        "reply": "Really? I ____ French for ten years.",
+        "answers": [
+          "have been learning"
+        ],
+        "answerIndex": 0
+      }
+
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "Look at Jane. She's so nervous. ",
+        "reply": " No wonder. She ____ for her boyfriend for ages.",
+        "answers": [
+          "has been waiting"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "Bill is sunburnt.",
+        "reply": "Yes, he really is. He ____ since the morning. ",
+        "answers": [
+          "has been sunbathing"
+        ],
+        "answerIndex": 0
+      }
+
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "Your parents look relaxed. ",
+        "reply": "They ____ all the weekend.",
+        "answers": [
+          "have been relaxing"
+        ],
+        "answerIndex": 0
+      }
+
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "All the footballers are so wet.",
+        "reply": "They ____ in the rain since the match started.",
+        "answers": [
+          "have been trying"
+        ],
+        "answerIndex": 0
+      }
+
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": " Have you talked to Richard yet?",
+        "reply": "Not yet. But I ____ to phone him since you told me.",
+        "answers": [
+          "have been trying"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "Is Grace your neighbour?",
+        "reply": "Yes, she is. She ____ next door for six years now. ",
+        "answers": [
+          "has been living"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "Why are Patt and Matt so dirty?",
+        "reply": "They ____ their bedroom.",
+        "answers": [
+          "have been painting"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "Shall I wake Doris up? ",
+        "reply": "Yes, please. She ____ all day long",
+        "answers": [
+          "has been sleeping"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  }
+]
