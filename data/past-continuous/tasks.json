@@ -1,0 +1,98 @@
+[
+  {
+    "phrases": [
+      {
+        "question" : "Were you talking to Bob during dinner?",
+        "reply": "I ____ to anybody. I was alone.",
+        "answers" : [
+          "wasn't talking"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "Were you watching a football match when I phoned you?",
+        "reply": "I ____ TV. I was listening to music.",
+        "answers": [
+          "wasn't watching"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "Was I wearing the blue tie at the party?",
+        "reply": "You ____ any tie as far as I can remember.",
+        "answers": [
+          "weren't wearing"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "Guess what I was doing between 5 and 6 o'clock.",
+        "reply": "You ____ anything, your sister told me.",
+        "answers": [
+          "weren't doing"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "When I met them, Sam was buying some meat and Jill was buying drinks.",
+        "reply": "I don't understand why they ____ food together..",
+        "answers": [
+          "weren't buying"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "I wasn't waiting for them when they arrived.",
+        "reply": "Why ____ for them? What happened?",
+        "answers": [
+          "weren't you waiting"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "Eve was waving at me when we got out of the car.",
+        "reply": "It's not true! She ____ at you.",
+        "answers": [
+          "wasn't waving"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "You weren't looking very happy at the beginning of the English lesson.",
+        "reply": "And why ____ happy? I didn't want to write the test!",
+        "answers": [
+          "wasn't I looking"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "phrases": [
+      {
+        "question" : "____ Kim yet?",
+        "reply": "Not yet. But I am going to see her on Friday.",
+        "answers" : [
+          "Have you seen"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question" : "Has Karl ever been to England?",
+        "reply": "No, never. But he ____ to Scotland twice.",
+        "answers" : [
+          "have already went"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question" : "How many foreign languages have you learned?",
+        "reply": "Unfortunately, I ____ any foreign languages so far.",
+        "answers" : [
+          "have not studied"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question" : "____ the email from me?",
+        "reply": " I'm afraid I haven't received any email from you since last week.",
+        "answers" : [
+          "have you got"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question" : "____ the email from me?",
+        "reply": "I'm afraid I haven't received any email from you since last week.",
+        "answers" : [
+          "have you got"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question" : "Why is Mary crying? What ____ to her?",
+        "reply": "Poor Mary. Her mum has been ill for a long time.",
+        "answers": [
+          "happened"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question" : "Where ____ so long?",
+        "reply": "I'm sorry, I missed the bus.",
+        "answers": [
+          "have you been"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question" : "Look. The sun ____.",
+        "reply": "It's fascinating. It has been covered by the moon.",
+        "answers": [
+          "have just disappeared"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question" : " Have you called your grandma?",
+        "reply": "Oh, no! I  her yet.",
+        "answers": [
+          "have not telephoned"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question" : "It's quite cold in here, isn't it?",
+        "reply": "Is it? I ____ the window.",
+        "answers": [
+          "have just opened"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  }
+]
