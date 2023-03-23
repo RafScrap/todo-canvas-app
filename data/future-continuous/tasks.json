@@ -1,0 +1,98 @@
+[
+  {
+    "phrases": [
+      {
+        "question": "I can take you to the airport.",
+        "reply": "It would be nice. ____",
+        "answers": [
+          "Will you be going that way?"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "Shall I say hello to her?",
+        "reply": "Why not? ____",
+        "answers": [
+          "Will you be writing to her?"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "Marion and Jimmy can stay up late tonight.",
+        "reply": "Really? ____",
+        "answers": [
+          "Will they be waiting for me?"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "He won't be there at ten o'clock",
+        "reply": "It's a shame. ____",
+        "answers": [
+          "Will he be signing the new contract?"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "I'll be in the forest.",
+        "reply": "In the forest? ____",
+        "answers": [
+          "What will you be doing?"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "There won't be enough oil in a couple of decades.",
+        "reply": "Do you think so? ____",
+        "answers": [
+          "What will we be using instead?"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "This time next week I'll be in Madrid.",
+        "reply": "Lucky you! ____",
+        "answers": [
+          "Will you be staying at a hotel?"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "Don't ring Sue up at 6 o'clock",
+        "reply": "Thanks for telling me. ____",
+        "answers": [
+          "Will she be bathing her baby?"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  }
+]

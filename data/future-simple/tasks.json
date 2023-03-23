@@ -1,0 +1,98 @@
+[
+  {
+    "phrases": [
+      {
+        "question": "I am not sure if I can offer this room.",
+        "reply": "____",
+        "answers": [
+          "Will our guests like it?"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "Can I borrow your laptop tonight?",
+        "reply": "____",
+        "answers": [
+          "Will you need it?"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "We arrive in Aberdeen at 1 o'clock.",
+        "reply": "____",
+        "answers": [
+          "Will we have time for lunch?"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "The show starts at 8.",
+        "reply": "____",
+        "answers": [
+          "Please, will you drive me there?"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "Your journey will be so long. ",
+        "reply": "____",
+        "answers": [
+          "How will you spend your time?"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "I've just missed the train. ",
+        "reply": "____",
+        "answers": [
+          "How will I get to school?"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "I'd like to see your project.",
+        "reply": "____",
+        "answers": [
+          "Will you work on it?"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "Your teacher asked you to help her",
+        "reply": "____",
+        "answers": [
+          "Will you do it for her?"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  }
+]

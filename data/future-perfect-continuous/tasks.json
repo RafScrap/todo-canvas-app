@@ -1,0 +1,122 @@
+[
+  {
+    "phrases": [
+      {
+        "question": "How long are you going to stay at this hotel?",
+        "reply": " On Sunday we ____ here for two weeks and we'd like to stay one more week.",
+        "answers": [
+          "will have been staying"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "Do you think Matt will finish the report in time?",
+        "reply": "No problem. He ____ on it for nearly three days tomorrow.",
+        "answers": [
+          "will have been working"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "Are you worried about your job interview in Paris?",
+        "reply": "Not really. When I leave for France, I ____ for it for more than a month. ",
+        "answers": [
+          "will have been preparing"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "We are going to the party at 6 o'clock. Will you join us?",
+        "reply": "I'm afraid I'll be tired. I'll ____ trees for five hours when the party starts.",
+        "answers": [
+          "will have been planting"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "Is the electric engine the future of cars?",
+        "reply": "I don't think so. In a ten years' time people ____ cars with internal combustion\n engines for a century and a half and it will remain so.",
+        "answers": [
+          "will have been driving"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "How long has Patricia been learning English?",
+        "reply": "At the end of this course she ____ English for six years.",
+        "answers": [
+          "will have been studying"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "How many countries has your sister visited during her journey?",
+        "reply": "I don't really know. But she ____ the world for a year before she gets back\n home.",
+        "answers": [
+          "will have been backpacking"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "Do you like endless soap operas?",
+        "reply": "I love them. By the end of this year I ____ Guiding Light for two decades.",
+        "answers": [
+          "will have been watching"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "Is the chicken ready?",
+        "reply": "Not at all. At 12.30 I ____ it for ninety minutes and it is not ready yet!",
+        "answers": [
+          "will have been baking"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "Is tennis a tiring sport?",
+        "reply": "Tiring? Look at this match. They ____ for more than three or four hours when it\n ends.",
+        "answers": [
+          "will have been playing"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  }
+]
