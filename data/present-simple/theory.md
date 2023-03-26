@@ -21,17 +21,7 @@ Quam elementum pulvinar etiam non quam lacus suspendisse faucibus. Ut placerat o
 Dillinger is currently extended with the following plugins.
 Instructions on how to use them in your own application are linked below.
 
-<ul>
-	<li>
-		<p style="line-height: 150%; text-indent: 0in; margin-bottom: 0in">
-			<b>«Единичные» (</b>
-			<span lang="en-US">
-				<b>Simple</b>
-			</span>
-			<b>)</b>
-		</p>
-	</li>
-</ul>
+<b>«Единичные»</b>
 
 
 | Plugin | README |
