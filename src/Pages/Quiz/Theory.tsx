@@ -3,6 +3,7 @@ import {useParams} from "react-router";
 import {useNavigate} from "react-router-dom";
 import {MarkdownBox} from "../../Components/MarkdownBox";
 import {RectSkeleton} from "@salutejs/plasma-ui";
+import {PresentSimpleTheory} from "../../Theory/PresentSimpleTheory";
 
 export const Theory = () => {
     const navigate = useNavigate();
@@ -14,29 +15,18 @@ export const Theory = () => {
         markdown: ""
     })
 
-    useEffect(() => {
-        if(!state.loaded)
-        fetch(`https://raw.githubusercontent.com/RafScrap/todo-canvas-app/main/data/${id}/theory.md`)
-            .then(async (resp) => {
-                const md = await resp.text()
-                setState({
-                    ...state,
-                    loaded: true,
-                    markdown: md
-                })
-            })
-            .catch((reason) => {
-                console.error(reason)
-            })
-    })
+    const getTheory = (key: string | undefined) => {
+        switch (key) {
+            case 'present-simple':
+                return <PresentSimpleTheory/>
+            default:
+                return <></>
+        }
+    }
 
     return (
         <>
-            {state.loaded ?
-                <MarkdownBox markdown={state.markdown}/>
-                :
-                <RectSkeleton width={"100%"} height={"300px"}/>
-                }
+            {getTheory(id)}
         </>
     )
 }
