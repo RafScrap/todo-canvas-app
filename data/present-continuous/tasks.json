@@ -1,0 +1,98 @@
+[
+  {
+    "phrases": [
+      {
+        "question": "Is your best friend eating chocolate?",
+        "response": "No, my best friend ____ chocolate.",
+        "answers": [
+          "is not eating"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "Are you drinking milk right now?",
+        "response": "No, I ____ milk right now.",
+        "answers": [
+          "am not drinking"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "Is your brother playing the piano?",
+        "response": "No, he ____ the piano.",
+        "answers": [
+          "am not drinking"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "Am I writing this test with you?",
+        "response": "No, you ____ this test with me.",
+        "answers": [
+          "are not writing"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "Are your parents singing a song at the moment?",
+        "response": "No, they ____ a song at the moment.",
+        "answers": [
+          "are not singing"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "Are you wearing your grandma's shoes today?",
+        "response": "No, I ____ my grandma's shoes today.",
+        "answers": [
+          "am not wearing"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "Are you and your neighbours riding bikes just now?",
+        "response": "No, we ____ bikes just now.",
+        "answers": [
+          "are not riding"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "Are all your uncles and aunts sitting near you?",
+        "response": "No, they ____ near me.",
+        "answers": [
+          "are not sitting"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  }
+]

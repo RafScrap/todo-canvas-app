@@ -1,0 +1,122 @@
+[
+  {
+    "phrases": [
+      {
+        "question": "Sam, how long ____ the laptop before it started working?",
+        "response": "The laptop? It took me five hours to repair it.",
+        "answers": [
+          "had you been repairing"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "I was so tired at the end of the hike!",
+        "response": "But we ____ so much",
+        "answers": [
+          "had not been walking"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "Why was your shirt full of stains?",
+        "response": "I ____ my car.",
+        "answers": [
+          "had been cleaning"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "You looked so exhausted.",
+        "response": "But I ____ so hard.",
+        "answers": [
+          "had not been working"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "Why did Sarah get sunburnt?",
+        "response": "Because she ____ on the beach all day.",
+        "answers": [
+          "had been lying"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "Mr. Clark, why were you so annoyed?",
+        "response": " Because they ____ to my arguments at all.",
+        "answers": [
+          "had not been listening"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "____ for a long time when you saw the doctor?",
+        "response": "Not really. For two or three days.",
+        "answers": [
+          "Had you been coughing"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "Miss Jones, how long ____ French when you moved to France?",
+        "response": "To tell the truth I'd never learned French before that.",
+        "answers": [
+          "had you been learning"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "Hi, Sam. Did you talk to Susan at last?",
+        "response": "Yes, I did. But she ____ to me for a week before that.",
+        "answers": [
+          "had not been speaking"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "The police finally caught the bank robbers early in the morning.",
+        "response": "I know. They ____ for them day and night.",
+        "answers": [
+          "had been looking"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  }
+]

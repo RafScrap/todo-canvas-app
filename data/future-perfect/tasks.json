@@ -1,0 +1,122 @@
+[
+  {
+    "phrases": [
+      {
+        "question": "What time ____ the windows?",
+        "reply": "By 5 o'clock, I hope.",
+        "answers": [
+          "will you have cleaned"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "When ____ the book?",
+        "reply": "She'll give it back to you in two weeks' time, she promissed",
+        "answers": [
+          "will Samantha have read"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "How many projects ____ when you finish this one?",
+        "reply": "This is only my second project.",
+        "answers": [
+          "will you have done"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "When ____ the portrait?",
+        "reply": "Before the end of the day, I would say.",
+        "answers": [
+          "will Susan have painted"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "____ the oil before we collect our car?",
+        "reply": "Yes, I will. I'll have done it by one o'clock.",
+        "answers": [
+          "Will you have changed"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "____ if we come in two hours?",
+        "reply": "I'm afraid it will start in an hour.",
+        "answers": [
+          "Will the show have started"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "____ her CV by the time she goes to the interview?",
+        "reply": "She's already done it.",
+        "answers": [
+          "Will Angie have updated"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "When ____ all the topics?",
+        "reply": "When I finish my lectures.",
+        "answers": [
+          "will you have covered"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "____ the top of the mountain before the sun sets?",
+        "reply": "Don't worry. It's just two hours' walk.",
+        "answers": [
+          "Will we have reached"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "____ in a ten years' time?",
+        "reply": "Who knows?",
+        "answers": [
+          "Will my hair have turned grey"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  }
+]
