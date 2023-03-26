@@ -109,7 +109,7 @@ export const App = memo(() => {
             <Container style={{
                 minHeight: '100vh'
             }}>
-                <Header title={`Hello, ${userName}`} back={true} onBackClick={() => {
+                <Header title={``} back={true} onBackClick={() => {
                     if (window.location.pathname !== '/')
                         navigate(-1)
                 }}>
