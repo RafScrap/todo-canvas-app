@@ -4,6 +4,27 @@ Lorem ipsum dolor sit amet, **consectetur** adipiscing elit, sed do eiusmod temp
 Risus nullam eget felis eget nunc. Elit sed vulputate mi sit amet mauris commodo. Et netus et malesuada fames.
 Quam id leo in vitae turpis massa. Quis vel eros donec ac odio tempor. Ac feugiat sed lectus vestibulum mattis ullamcorper.
 
+<p dir="auto">Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Senectus et netus et malesuada fames ac turpis.
+Risus nullam eget felis eget nunc. Elit sed vulputate mi sit amet mauris commodo. Et netus et malesuada fames.
+Quam id leo in vitae turpis massa. Quis vel eros donec ac odio tempor. Ac feugiat sed lectus vestibulum mattis ullamcorper.</p>
+
+<table>
+  <tr>
+    <th>Company</th>
+    <th>Contact</th>
+    <th>Country</th>
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Maria Anders</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Centro comercial Moctezuma</td>
+    <td>Francisco Chang</td>
+    <td>Mexico</td>
+  </tr>
+</table>
 
 ## Subtitle 1
 
