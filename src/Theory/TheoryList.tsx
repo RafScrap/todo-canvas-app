@@ -1,23 +1,41 @@
+
 import {render} from "react-dom";
 import React from "react";
+import {MarkedList, MarkedItem, TextS, TextXS} from "@salutejs/plasma-ui"
+import { IconInfo, IconTimerStroke} from '@salutejs/plasma-icons';
+import {MarginTopBottom, Em} from "./Styles"
 
-export const TheoryWithoutExamples = ({ data }) => {    
+import {  } from '@salutejs/plasma-tokens';
+
+export const TheoryList = ({ data }) => {    
     return (
-        <ul>
-            {data.map((theory) => <li>{theory}</li>)}
-        </ul>
+        <>
+            {data.map((theory) => 
+            <MarkedItem text={theory}>
+                <IconInfo size="xs"/>
+            </MarkedItem>)}
+        </>
     )
 }
 
-export const TheoryWithExamples = ({ data }) => {    
+export const TheoryListWithExamples = ({ data, number }) => {    
     return (
-        <ul>
-            {data.map((elem) => 
-              <>
-              <li>{elem.theory}</li>
-              {elem.examples.map((example) => <p>{example}</p>)}
-              </>
+        <MarginTopBottom>
+        <MarkedList>
+            {data.map((item) => 
+                <>
+                <MarkedItem text={item.theory} style={{fontWeight: 'bold', fontSize: '0.9rem'}}>
+                    {number ?  <IconTimerStroke size="xs" /> : <IconInfo size="xs"/>}
+                </MarkedItem>
+                {item.examples.map((i) =>
+                    <> 
+                    <MarginTopBottom><TextS>{i.example}</TextS></MarginTopBottom>
+                    <MarginTopBottom><TextXS>{i.translation}<Em>{" " + i.note}</Em></TextXS></MarginTopBottom>
+                    </>
+                )}
+                </>
             )}
-        </ul>
+        </MarkedList>
+        </MarginTopBottom>
     )
 }
