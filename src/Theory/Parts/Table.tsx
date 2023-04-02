@@ -46,13 +46,13 @@ export const Table = ({ data, name }) => {
   for (let i = 0; i < maxRows; i++) {
     rows.push(i)
   }
-return (
+  return (
   <> 
     <Center><MarginBottom><TextBox title={name}/></MarginBottom></Center>
     <Container>
       {rows.map(indexRow => <TableRow data={data} indexRow={indexRow} />)}
     </Container>
   </>
-)
+  )
 }
 

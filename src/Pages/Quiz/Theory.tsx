@@ -3,9 +3,12 @@ import {useParams} from "react-router";
 import {useNavigate} from "react-router-dom";
 import {MarkdownBox} from "../../Components/MarkdownBox";
 import {RectSkeleton} from "@salutejs/plasma-ui";
-import {PresentSimpleTheory} from "../../Theory/PresentSimpleTheory";
-import {PastSimpleTheory} from "../../Theory/PastSimpleTheory";
-import {FutureSimpleTheory} from "../../Theory/FutureSimpleTheory";
+import {PresentSimple} from "../../Theory/Theory/PresentSimple";
+import {PastSimple} from "../../Theory/Theory/PastSimple";
+import {FutureSimple} from "../../Theory/Theory/FutureSimple";
+import {PastContinuous} from "../../Theory/Theory/PastContinuous";
+import {PresentContinuous} from "../../Theory/Theory/PresentContinuous";
+import {FutureContinuous} from "../../Theory/Theory/FutureContinuous";
 
 export const Theory = () => {
     const navigate = useNavigate();
@@ -20,11 +23,17 @@ export const Theory = () => {
     const getTheory = (key: string | undefined) => {
         switch (key) {
             case 'present-simple':
-                return <PresentSimpleTheory />
+                return <PresentSimple />
             case 'past-simple':
-                return <PastSimpleTheory />
+                return <PastSimple />
             case 'future-simple':
-                return <FutureSimpleTheory />
+                return <FutureSimple />
+            case 'past-continuous':
+                return <PastContinuous />
+            case 'present-continuous':
+                return <PresentContinuous />
+            case 'future-continuous':
+                return <FutureContinuous />        
             default:
                 return <></>
         }
