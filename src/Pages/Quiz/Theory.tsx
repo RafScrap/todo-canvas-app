@@ -4,6 +4,8 @@ import {useNavigate} from "react-router-dom";
 import {MarkdownBox} from "../../Components/MarkdownBox";
 import {RectSkeleton} from "@salutejs/plasma-ui";
 import {PresentSimpleTheory} from "../../Theory/PresentSimpleTheory";
+import {PastSimpleTheory} from "../../Theory/PastSimpleTheory";
+import {FutureSimpleTheory} from "../../Theory/FutureSimpleTheory";
 
 export const Theory = () => {
     const navigate = useNavigate();
@@ -18,7 +20,11 @@ export const Theory = () => {
     const getTheory = (key: string | undefined) => {
         switch (key) {
             case 'present-simple':
-                return <PresentSimpleTheory/>
+                return <PresentSimpleTheory />
+            case 'past-simple':
+                return <PastSimpleTheory />
+            case 'future-simple':
+                return <FutureSimpleTheory />
             default:
                 return <></>
         }
