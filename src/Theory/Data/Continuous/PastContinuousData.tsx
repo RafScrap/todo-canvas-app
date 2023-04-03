@@ -21,7 +21,7 @@ export const TimeAction = [
         [
             {
             example: "— Weren't you sleeping an hour ago?", 
-            note: "Момент времени, час назад, указан прямо",
+            note: "Момент времени, час назад, указан прямо.",
             translation: "Ты спал час назад?"
             },
             {
@@ -40,7 +40,7 @@ export const TypeAction = [
         [
             {
             example: "We were eating the cake yesterday.",
-            note: "Действие переводится именно как «ели», а не «съели»",  
+            note: "Именно «ели», а не «съели»",  
             translation: "Мы ели торт вчера."
             }
         ]

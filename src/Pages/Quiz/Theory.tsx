@@ -3,12 +3,19 @@ import {useParams} from "react-router";
 import {useNavigate} from "react-router-dom";
 import {MarkdownBox} from "../../Components/MarkdownBox";
 import {RectSkeleton} from "@salutejs/plasma-ui";
-import {PresentSimple} from "../../Theory/Theory/PresentSimple";
-import {PastSimple} from "../../Theory/Theory/PastSimple";
-import {FutureSimple} from "../../Theory/Theory/FutureSimple";
-import {PastContinuous} from "../../Theory/Theory/PastContinuous";
-import {PresentContinuous} from "../../Theory/Theory/PresentContinuous";
-import {FutureContinuous} from "../../Theory/Theory/FutureContinuous";
+
+import {PresentSimple} from "../../Theory/Theory/Simple/PresentSimple";
+import {PastSimple} from "../../Theory/Theory/Simple/PastSimple";
+import {FutureSimple} from "../../Theory/Theory/Simple/FutureSimple";
+import {PastContinuous} from "../../Theory/Theory/Continuous/PastContinuous";
+import {PresentContinuous} from "../../Theory/Theory/Continuous/PresentContinuous";
+import {FutureContinuous} from "../../Theory/Theory/Continuous/FutureContinuous";
+import {PastPerfect} from "../../Theory/Theory/Perfect/PastPerfect";
+import {PresentPerfect} from "../../Theory/Theory/Perfect/PresentPerfect";
+import {FuturePerfect} from "../../Theory/Theory/Perfect/FuturePerfect";
+import {FuturePerfectContinuous} from "../../Theory/Theory/PerfectContinuous/FuturePerfectContinuous";
+import {PastPerfectContinuous} from "../../Theory/Theory/PerfectContinuous/PastPerfectContinuous";
+import {PresentPerfectContinuous} from "../../Theory/Theory/PerfectContinuous/PresentPerfectContinuous";
 
 export const Theory = () => {
     const navigate = useNavigate();
@@ -23,17 +30,29 @@ export const Theory = () => {
     const getTheory = (key: string | undefined) => {
         switch (key) {
             case 'present-simple':
-                return <PresentSimple />
+                return <PresentSimple name={"Present Simple"}/>
             case 'past-simple':
-                return <PastSimple />
+                return <PastSimple name={"Past Simple"}/>
             case 'future-simple':
-                return <FutureSimple />
+                return <FutureSimple name={"Future Simple"}/>
             case 'past-continuous':
-                return <PastContinuous />
+                return <PastContinuous name={"Past Continuous"}/>
             case 'present-continuous':
-                return <PresentContinuous />
+                return <PresentContinuous name={"Present Continuous"}/>
             case 'future-continuous':
-                return <FutureContinuous />        
+                return <FutureContinuous name={"Future Continuous"}/>  
+            case 'past-perfect':
+                return <PastPerfect name={"Past Perfect"}/>
+            case 'present-perfect':
+                return <PresentPerfect name={"Present Perfect"}/>
+            case 'future-perfect':
+                return <FuturePerfect name={"Future Perfect"}/> 
+            case 'past-perfect-continuous':
+                    return <PastPerfectContinuous name={"Past Perfect Continuous"}/>
+                case 'present-perfect-continuous':
+                    return <PresentPerfectContinuous name={"Present Perfect Continuous"}/>
+                case 'future-perfect-continuous':
+                    return <FuturePerfectContinuous name={"Future PerfectContinuous"}/>               
             default:
                 return <></>
         }

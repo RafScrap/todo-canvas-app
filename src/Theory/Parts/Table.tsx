@@ -1,8 +1,8 @@
 import {render} from "react-dom";
 import React from "react";
 import {TextBox, Row, Col, Container} from "@salutejs/plasma-ui"
-import {MarginBottom, Center, CellStyle, Strong} from "./Styles"
-import {TextS, TextM} from "@salutejs/plasma-ui"
+import {MarginTopBottom, Center, CellStyle, Strong, } from "./Styles"
+import {TextS} from "@salutejs/plasma-ui"
 
 const TableCell = ({ data, indexRow, indexColumn }) => {
   var offset = 0
@@ -48,10 +48,12 @@ export const Table = ({ data, name }) => {
   }
   return (
   <> 
-    <Center><MarginBottom><TextBox title={name}/></MarginBottom></Center>
+    <Center><TextBox title={name}/></Center>
+    <MarginTopBottom>
     <Container>
       {rows.map(indexRow => <TableRow data={data} indexRow={indexRow} />)}
     </Container>
+    </MarginTopBottom>
   </>
   )
 }

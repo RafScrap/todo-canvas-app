@@ -4,18 +4,20 @@ export const Center = styled.div`
   text-align: center
 `;
 
-export const MarginBottom = styled.div`
-  margin-bottom: 1rem
-`;
-
 export const MarginTopBottom = styled.div`
   margin: 0.3rem 0rem
 `;
 
-export const Em = styled.em`
+export const Em = styled.em``;
+
+export const Strong = styled.strong``;
+
+export const Flex = styled.div`
+  display: flex
 `;
 
-export const Strong = styled.strong`
+export const Block = styled.div`
+  margin: 1rem
 `;
 
 export const CellStyle = styled.div`

@@ -21,7 +21,7 @@ export const TimeAction = [
         [
             {
             example: "— Will you be sleeping tomorrow?", 
-            note: "Момент времени, завтра, указан прямо",
+            note: "Момент времени, завтра, указан прямо.",
             translation: "Ты будешь спать завтра?"
             },
             {
@@ -40,7 +40,7 @@ export const TypeAction = [
         [
             {
             example: "We will be eating the cake tomorrow.",
-            note: "Действие переводится именно как «будем есть», а не «съедим».",  
+            note: "Именно «будем есть», а не «съедим»",  
             translation: "Мы будем есть торт завтра."
             }
         ]

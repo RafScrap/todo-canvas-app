@@ -22,9 +22,9 @@ export const TypeAction = [
         examples:
         [
             {
-            example: "I will walk my dog every day.",
+            example: "I will eat an apple every day.",
             note: "", 
-            translation: "Я буду гулять с моей собакой каждый день."
+            translation: "Я буду съедать яблоко каждый день."
             }
         ]
     
@@ -34,9 +34,9 @@ export const TypeAction = [
         examples:
         [
             {
-            example: "Will he eat apples tomorrow?",
+            example: "Will he eat an apple tomorrow?",
             note: "",  
-            translation: "Он будет есть яблоки завтра?"
+            translation: "Он съест яблоко завтра?"
             }
         ]
     }

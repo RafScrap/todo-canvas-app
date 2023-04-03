@@ -5,25 +5,15 @@ import {MarkedList, MarkedItem, TextS, TextXS} from "@salutejs/plasma-ui"
 import { IconInfo, IconTimerStroke} from '@salutejs/plasma-icons';
 import {MarginTopBottom, Em} from "./Styles"
 
-export const TheoryList = ({ data }) => {    
-    return (
-    <>
-        {data.map((theory) => 
-            <MarkedItem text={theory}>
-                <IconInfo size="xs"/>
-            </MarkedItem>
-        )}
-    </>
-    )
-}
-
-export const TheoryListWithExamples = ({ data, time }) => {    
+export const TheoryListWithExamples = ({ data, time, bold }) => {    
+    var Style = {fontSize: '0.9rem', fontWeight: 400}
+    if (bold) Style.fontWeight = 700
     return (
         <MarginTopBottom>
         <MarkedList>
             {data.map((item) => 
             <>
-                <MarkedItem text={item.theory} style={{fontWeight: 'bold', fontSize: '0.9rem'}}>
+                <MarkedItem text={item.theory} style={Style}    >
                     {time ?  <IconTimerStroke size="xs" /> : <IconInfo size="xs"/>}
                 </MarkedItem>
                 {item.examples.map((i) =>
