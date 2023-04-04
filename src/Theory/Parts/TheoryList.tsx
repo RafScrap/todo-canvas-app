@@ -16,12 +16,7 @@ export const TheoryListWithExamples = ({ data, time, bold }) => {
                 <MarkedItem text={item.theory} style={Style}    >
                     {time ?  <IconTimerStroke size="xs" /> : <IconInfo size="xs"/>}
                 </MarkedItem>
-                {item.examples.map((i) =>
-                    <> 
-                    <MarginTopBottom><TextS>{i.example}</TextS></MarginTopBottom>
-                    <MarginTopBottom><TextXS>{i.translation}<Em>{" " + i.note}</Em></TextXS></MarginTopBottom>
-                    </>
-                )}
+                <ExamplesList data={item.examples}/>
             </>
             )}
         </MarkedList>
@@ -29,15 +24,15 @@ export const TheoryListWithExamples = ({ data, time, bold }) => {
     )
 }
 
-export const ExampleListBe = ({ data }) => {    
+export const ExamplesList = ({ data }) => {    
     return (
-        <MarginTopBottom>
+        <>
             {data.map((i) => 
                 <> 
                 <MarginTopBottom><TextS>{i.example}</TextS></MarginTopBottom>
-                <MarginTopBottom><TextXS>{i.translation}</TextXS></MarginTopBottom>
+                <MarginTopBottom><TextXS>{i.translation}<Em>{" " + i.note}</Em></TextXS></MarginTopBottom>
                 </>
             )}
-        </MarginTopBottom>
+        </>
     )
 }

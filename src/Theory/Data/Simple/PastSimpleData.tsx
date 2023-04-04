@@ -64,11 +64,13 @@ export const TableDataBe = [["Утверждение", "I/He/She/It + was", "You
 
 export const ExamplesBe = [
     {
-        example: "We were not here a year ago.",  
+        example: "We were not here a year ago.", 
+        note: "", 
         translation: "Мы не были здесь год назад."
     },
     {
         example: "Was the cat (~it) here yesterday?",
+        note: "",
         translation: "Кот был здесь вчера?"
     }
 ]

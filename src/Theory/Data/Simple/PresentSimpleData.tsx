@@ -55,11 +55,13 @@ export const TableDataBe = [["Утверждение", "I + am", "You/We/They + 
 
 export const ExamplesBe = [
     {
-        example: "I am not a human.",  
+        example: "I am not a human.",
+        note: "",  
         translation: "Я не человек."
     },
     {
         example: "Is the cat (~it) not here?",
+        note : "",
         translation: "Кот не здесь?"
     }
 ]

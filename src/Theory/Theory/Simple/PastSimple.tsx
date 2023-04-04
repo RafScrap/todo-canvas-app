@@ -1,8 +1,9 @@
 import {render} from "react-dom";
 import React from "react";
 import { Table } from "../../Parts/Table";
-import { TheoryListWithExamples, ExampleListBe} from "../../Parts/TheoryList";
+import { ExamplesList, TheoryListWithExamples } from "../../Parts/TheoryList";
 import { TableData, TimeAction, TypeAction, TableDataBe, ExamplesBe} from "../../Data/Simple/PastSimpleData"
+import { MarginTopBottom } from "../../Parts/Styles";
 
 export const PastSimple = ({name}) => {
     return (
@@ -11,7 +12,9 @@ export const PastSimple = ({name}) => {
           <TheoryListWithExamples data={TimeAction} time={true} bold={true}/>
           <TheoryListWithExamples data={TypeAction} time={false} bold={true}/>
           <Table data = {TableDataBe} name = {"Исключение: глагол to be"} />
-          <ExampleListBe data={ExamplesBe} />
+          <MarginTopBottom>
+          <ExamplesList data={ExamplesBe} />
+          </MarginTopBottom>
         </>
     )
 }
