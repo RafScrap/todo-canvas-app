@@ -1,8 +1,6 @@
 import React, {useEffect, useState} from "react"
 import {useParams} from "react-router";
 import {useNavigate} from "react-router-dom";
-import {MarkdownBox} from "../../Components/MarkdownBox";
-import {RectSkeleton} from "@salutejs/plasma-ui";
 
 import {PresentSimple} from "../../Theory/Theory/Simple/PresentSimple";
 import {PastSimple} from "../../Theory/Theory/Simple/PastSimple";
@@ -16,6 +14,9 @@ import {FuturePerfect} from "../../Theory/Theory/Perfect/FuturePerfect";
 import {FuturePerfectContinuous} from "../../Theory/Theory/PerfectContinuous/FuturePerfectContinuous";
 import {PastPerfectContinuous} from "../../Theory/Theory/PerfectContinuous/PastPerfectContinuous";
 import {PresentPerfectContinuous} from "../../Theory/Theory/PerfectContinuous/PresentPerfectContinuous";
+import {Results} from "../../Theory/Parts/Results"
+import {Request} from "../../Theory/Parts/Request"
+
 
 export const Theory = () => {
     const navigate = useNavigate();
@@ -30,6 +31,8 @@ export const Theory = () => {
     const getTheory = (key: string | undefined) => {
         switch (key) {
             case 'present-simple':
+                //return <Request/>
+                //return <Results />
                 return <PresentSimple name={"Present Simple"}/>
             case 'past-simple':
                 return <PastSimple name={"Past Simple"}/>

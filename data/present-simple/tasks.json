@@ -1,43 +1,53 @@
-[
+[  
   {
     "phrases": [
       {
-        "question": "Alex!",
-        "reply": "What? We ____ be at home in five hours.",
+        "question": "Hello! Do you want to go to France?",
+        "reply": "Yes, I _____ to do it!",
         "answers": [
-          "are",
-          "won't",
-          "will"
+          "want",
+          "wants",
+          "wanted"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "question": "Fine! Do you have any questions?",
+        "reply": "Um... I am sorry, but we _____ have a car!",
+        "answers": [
+          "aren't",
+          "doesn't",
+          "don't"
         ],
         "answerIndex": 2
       },
       {
-        "question": "But our airplane pilot was killed two hours ago.",
-        "reply": "____ we be at home?",
+        "question": "...Stop! Do you know Joan?",
+        "reply": "Yes, but she _____ have a car.",
         "answers": [
-          "Will",
-          "Won’t",
-          "Don't"
+          "isn't",
+          "doesn't",
+          "don't"
         ],
         "answerIndex": 1
       },
       {
-        "question": "Yes, but I have tickets to Moscow.",
-        "reply": "____ we be in Moscow in five hours?",
+        "question": "But she has money.",
+        "reply": "..._____ she have much money?",
         "answers": [
           "Do",
-          "Will",
-          "Don't"
+          "Is",
+          "Does" 
         ],
-        "answerIndex": 1
+        "answerIndex": 2
       },
       {
-        "question": "Yes, but there are bears in Russia.",
-        "reply": "...We ____ be in Moscow.",
+        "question": "Very much. Do you know what to do?",
+        "reply": "I _____.",
         "answers": [
-          "won't",
-          "will",
-          "are"
+          "know",
+          "knows",
+          "known" 
         ],
         "answerIndex": 0
       }
@@ -46,42 +56,52 @@
   {
     "phrases": [
       {
-        "question": "Alex!",
-        "reply": "What? We ____ be at home in five hours.",
+        "question": "What are you thinking, Alex?",
+        "reply": "I _____ to be president.",
         "answers": [
-          "are",
-          "won't",
-          "will"
+          "wanted",
+          "wants",
+          "want"
         ],
         "answerIndex": 2
       },
       {
-        "question": "But our airplane pilot was killed two hours ago.",
-        "reply": "____ we be at home?",
+        "question": "Why?",
+        "reply": "A president ____ work and gets a lot of money.",
         "answers": [
-          "Will",
-          "Won’t",
-          "Don't"
+          "isn't",
+          "don't ",
+          "doesn't "
         ],
-        "answerIndex": 1
+        "answerIndex": 2
       },
       {
-        "question": "Yes, but I have tickets to Moscow.",
-        "reply": "____ we be in Moscow in five hours?",
+        "question": "People don't like presidents.",
+        "reply": "_____ people like anyone?",
         "answers": [
           "Do",
-          "Will",
-          "Don't"
+          "Are",
+          "Does"
         ],
-        "answerIndex": 1
+        "answerIndex": 0
       },
       {
-        "question": "Yes, but there are bears in Russia.",
-        "reply": "...We ____ be in Moscow.",
+        "question": "Becoming president is not simple.",
+        "reply": "Life _____ always difficult.",
         "answers": [
-          "won't",
-          "will",
-          "are"
+          "is",
+          "do",
+          "does"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "question": "Presidents don't play Genshin every day.",
+        "reply": "...I _____ want to be President.",
+        "answers": [
+          "do not",
+          "am not",
+          "is not"
         ],
         "answerIndex": 0
       }
@@ -90,42 +110,52 @@
   {
     "phrases": [
       {
-        "question": "Alex!",
-        "reply": "What? We ____ be at home in five hours.",
+        "question": "I have a friend.",
+        "reply": "My name is Mand.",
         "answers": [
           "are",
-          "won't",
-          "will"
+          "is",
+          "am"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "question": "In any weather...",
+        "reply": "We ___ together.",
+        "answers": [
+          "plays",
+          "play",
+          "played"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "question": "if life is bad, ",
+        "reply": "We ____ sad.",
+        "answers": [
+          "am not",
+          "isn't",
+          "aren't"
         ],
         "answerIndex": 2
       },
       {
-        "question": "But our airplane pilot was killed two hours ago.",
-        "reply": "____ we be at home?",
+        "question": "May you not rhyme?",
+        "reply": "_____ it a crime?",
         "answers": [
-          "Will",
-          "Won’t",
-          "Don't"
+          "Is",
+          "Does",
+          "Do"
         ],
-        "answerIndex": 1
-      },
-      {
-        "question": "Yes, but I have tickets to Moscow.",
-        "reply": "____ we be in Moscow in five hours?",
+        "answerIndex": 0
+      }, 
+      {     
+        "question": "It looks, um... strange.",
+        "reply": "I _____ to change.",
         "answers": [
-          "Do",
-          "Will",
-          "Don't"
-        ],
-        "answerIndex": 1
-      },
-      {
-        "question": "Yes, but there are bears in Russia.",
-        "reply": "...We ____ be in Moscow.",
-        "answers": [
-          "won't",
-          "will",
-          "are"
+          "try",
+          "tries",
+          "am"
         ],
         "answerIndex": 0
       }

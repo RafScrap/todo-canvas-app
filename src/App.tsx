@@ -34,7 +34,7 @@ const test0 = [
         variants: ["want", "wants", "wanted"], correct: 0
     },
     {
-        q: "Fine! Do you have questions?", a: "Um... I am sorry, but we _____ have a car!",
+        q: "Fine! Do you have any questions?", a: "Um... I am sorry, but we _____ have a car!",
         variants: ["aren't", "doesn't", "don't"], correct: 2
     },
     {

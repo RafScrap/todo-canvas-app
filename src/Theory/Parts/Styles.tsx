@@ -16,6 +16,10 @@ export const Flex = styled.div`
   display: flex
 `;
 
+export const Width = styled.div`
+  width: '100%'
+`;
+
 export const Block = styled.div`
   margin: 1rem
 `;

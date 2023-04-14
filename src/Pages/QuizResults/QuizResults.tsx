@@ -1,5 +1,6 @@
 import {DsplL, TextBoxBiggerTitle} from "@salutejs/plasma-ui";
 import React from "react";
+//import { Rating } from "../../Theory/Parts/Rating";
 
 export type QuizResultsProps = {
     right: number,
@@ -7,7 +8,6 @@ export type QuizResultsProps = {
 }
 
 export const QuizResults = ({right, total}: QuizResultsProps) => {
-
     let percent = right/total;
     let text : string;
     if(percent < 0.4)
@@ -20,11 +20,12 @@ export const QuizResults = ({right, total}: QuizResultsProps) => {
         text = 'Почти идеально'
     else
         text = 'Идеально!'
-
-
     return (
-        <>
-            <div style={{
+        <></>
+    )
+}
+
+/*<div style={{
                 textAlign: 'center'
             }}>
                 <DsplL
@@ -32,9 +33,4 @@ export const QuizResults = ({right, total}: QuizResultsProps) => {
                 <TextBoxBiggerTitle>
                     {text}
                 </TextBoxBiggerTitle>
-            </div>
-
-
-        </>
-    )
-}
+            </div>*/
