@@ -2,18 +2,18 @@
   {
     "phrases": [
       {
-        "question": "Jerry, I hear you had a big birthday party last week.",
-        "reply": "Yes, I _____ eighteen years old two weeks ago.",
+        "question": "Hello, Alex!",
+        "reply": "Hello, Harley! I hear you were eighteen years old two weeks ago.",
         "answers": [
           "was",
           "was not",
           "were"
         ],
-        "answerIndex": 0
+        "answerIndex": 2
       },
       {
-        "question": " your birthday and the party on the same day?",
-        "reply": "Yes, I have a twin brother and he went to France.",
+        "question": "Yes, but I had a big birthday party last week.",
+        "reply": "______ your birthday and the party on the same day?",
         "answers": [
           "Weren't",
           "Was",
@@ -22,8 +22,8 @@
         "answerIndex": 0
       },
       {
-        "question": "_____ you worried about that?",
-        "reply": "A little, but my brother comforted me.",
+        "question": "Yes, I have a twin brother and he went to France.",
+        "reply": "______ you worried about that?",
         "answers": [
           "Was",
           "Were",
@@ -32,8 +32,8 @@
         "answerIndex": 1
       },
       {
-        "question": "_____ your father happy to have twins?",
-        "reply": "No, he felt surprised.",
+        "question": "A little, but my brother comforted me.",
+        "reply": "Was your father happy to have twins?",
         "answers": [
           "Do",
           "Were",
@@ -43,12 +43,22 @@
       },
       {
         
-        "question": "As your mother?",
-        "reply": "No, she _____ shocked. My mother is always relaxed.",
+        "question": "No, he felt surprised.",
+        "reply": "I hear your mother ______ shocked.",
         "answers": [
           "don't",
           "wasn't",
           "weren't" 
+        ],
+        "answerIndex": 1
+      },
+      {
+        "question": "Yes, she is always relaxed.",
+        "reply": "Anyway, it ______ a beautiful day eighteen years ago.",
+        "answers": [
+          "did",
+          "was",
+          "were" 
         ],
         "answerIndex": 1
       }
@@ -57,18 +67,18 @@
   {
     "phrases": [
       {
-        "question": "Hi Harley. How are you?",
-        "reply": "Fine. ______ you give your wife a birthday present yesterday?",
+        "question": "Hi Alex. Do you know about yesterday's story?",
+        "reply": "Hi Harley! I don't know much. You _____ to give a gift to a friend...",
         "answers": [
-          "Didn't",
-          "Doesn't",
-          "Does"
+          "wanted",
+          "wants",
+          "want"
         ],
         "answerIndex": 0
       },
       {
-        "question": "Yes. I _____ find a gift in one store but...",
-        "reply": "But?",
+        "question": "And what else?",
+        "reply": "You ______ find a gift in one store but...",
         "answers": [
           "didn't",
           "did",
@@ -77,34 +87,34 @@
         "answerIndex": 0
       },
       {
-        "question": "But I ______ a beautiful T-shirt in another store.",
-        "reply": "What was the shirt?",
+        "question": "But I found a T-shirt with a picture of a bear in another store.",
+        "reply": "And didn't the problem appear?",
         "answers": [
-          "noticed",
-          "notice",
-          "notices"
-        ],
-        "answerIndex": 0
-      },
-      {
-        "question": "It had an amazing picture of a bear!",
-        "reply": "_____ problems appear on a date?",
-        "answers": [
-          "did",
-          "does",
-          "were"
-        ],
-        "answerIndex": 0
-      },
-      {
-        "question": "Yes! I _______ that the seller gave me the T-shirt with a picture of beer!",
-        "reply": "...Yes, it is awkward.",
-        "answers": [
-          "discovere",
-          "discoveres",
-          "discovered"
+          "wasn't",
+          "isn't",
+          "didn't"
         ],
         "answerIndex": 2
+      },
+      {
+        "question": "It appeared later! On a date...",
+        "reply": "You ______ that the seller gave you a T-shirt with a picture of beer.",
+        "answers": [
+          "discovered",
+          "discovere",
+          "discoveres"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "question": "Yes, it was awkward!",
+        "reply": "Yes, but your friend ... it and that's the main thing.",
+        "answers": [
+          "like",
+          "liked",
+          "was"
+        ],
+        "answerIndex": 1
       }
     ]
   },
