@@ -1,59 +1,162 @@
-[
+[  
   {
     "phrases": [
       {
-        "question": "Samuel, I hear you ____ eighteen years old last week.",
-        "response": "Yes, I ____. I had a big birthday party.",
+        "question": "Jerry, I hear you had a big birthday party last week.",
+        "reply": "Yes, I _____ eighteen years old two weeks ago.",
         "answers": [
-          "were + was"
+          "was",
+          "was not",
+          "were"
         ],
         "answerIndex": 0
       },
       {
-        "question": "And when ____ you born?",
-        "response": "I ____ born on 30 June.",
+        "question": " your birthday and the party on the same day?",
+        "reply": "Yes, I have a twin brother and he went to France.",
         "answers": [
-          "were + was"
+          "Weren't",
+          "Was",
+          "Don't"
         ],
         "answerIndex": 0
       },
       {
-        "question": "____ your birthday party on the same day?",
-        "response": "No, it ____ . It ____ a week later.",
+        "question": "_____ you worried about that?",
+        "reply": "A little, but my brother comforted me.",
         "answers": [
-          "was + wasn't + was"
+          "Was",
+          "Were",
+          "Does"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "question": "_____ your father happy to have twins?",
+        "reply": "No, he felt surprised.",
+        "answers": [
+          "Do",
+          "Were",
+          "Was" 
+        ],
+        "answerIndex": 2
+      },
+      {
+        
+        "question": "As your mother?",
+        "reply": "No, she _____ shocked. My mother is always relaxed.",
+        "answers": [
+          "don't",
+          "wasn't",
+          "weren't" 
+        ],
+        "answerIndex": 1
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "Hi Harley. How are you?",
+        "reply": "Fine. ______ you give your wife a birthday present yesterday?",
+        "answers": [
+          "Didn't",
+          "Doesn't",
+          "Does"
         ],
         "answerIndex": 0
       },
       {
-        "question": "Why ____ your birthday party on the same day?",
-        "response": "I have a twin brother and he ____ at home. He ____ in France.",
+        "question": "Yes. I _____ find a gift in one store but...",
+        "reply": "But?",
         "answers": [
-          "wasn't + wasn't + was"
+          "didn't",
+          "did",
+          "doesn't "
         ],
         "answerIndex": 0
       },
       {
-        "question": "____ you and your brother born at the same time?",
-        "response": "No, we ____. I ____ born one hour after him.",
+        "question": "But I ______ a beautiful T-shirt in another store.",
+        "reply": "What was the shirt?",
         "answers": [
-          "were + weren't + was"
+          "noticed",
+          "notice",
+          "notices"
         ],
         "answerIndex": 0
       },
       {
-        "question": "____ your parents happy to have twins?",
-        "response": "Yes, they ____. But our grandma ____. She ____ shocked.",
+        "question": "It had an amazing picture of a bear!",
+        "reply": "_____ problems appear on a date?",
         "answers": [
-          "were + were + wasn't + was"
+          "did",
+          "does",
+          "were"
         ],
         "answerIndex": 0
       },
       {
-        "question": "And what about your grandpa. ____ he shocked, too?",
-        "response": "No, he ____. My grandpa is always relaxed.",
+        "question": "Yes! I _______ that the seller gave me the T-shirt with a picture of beer!",
+        "reply": "...Yes, it is awkward.",
         "answers": [
-          "was + wasn't"
+          "discovere",
+          "discoveres",
+          "discovered"
+        ],
+        "answerIndex": 2
+      }
+    ]
+  },
+  {
+    "phrases": [
+      {
+        "question": "I was in USA two years ago!",
+        "reply": "Oh, I ____ in this country two years ago!",
+        "answers": [
+          "am",
+          "live",
+          "lived"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "question": "In Washington?",
+        "reply": "No, I ____ live in Washington.",
+        "answers": [
+          "did",
+          "didn’t",
+          "do"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "question": "Oh, I was in Washington five years ago.",
+        "reply": "____ you live in Washington at that time?",
+        "answers": [
+          "Do",
+          "Did",
+          "Didn't"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "question": "Yes, but I could live in Russia.",
+        "reply": "Why ____ you choose this country?",
+        "answers": [
+          "aren't",
+          "did",
+          "didn't"
+        ],
+        "answerIndex": 2
+      }, 
+      {     
+        "question": "Because bears live in Russia.",
+        "reply": "Hm.. It ______ an interesting reason.",
+        "answers": [
+          "was",
+          "were",
+          "am"
         ],
         "answerIndex": 0
       }
