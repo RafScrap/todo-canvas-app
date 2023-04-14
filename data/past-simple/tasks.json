@@ -3,7 +3,7 @@
     "phrases": [
       {
         "question": "Hello, Alex!",
-        "reply": "Hello, Harley! I hear you were eighteen years old two weeks ago.",
+        "reply": "Hello, Harley! I hear you _____ eighty years old two weeks ago.",
         "answers": [
           "was",
           "was not",
@@ -33,7 +33,7 @@
       },
       {
         "question": "A little, but my brother comforted me.",
-        "reply": "Was your father happy to have twins?",
+        "reply": "_____ your father happy to have twins?",
         "answers": [
           "Do",
           "Were",
@@ -54,7 +54,7 @@
       },
       {
         "question": "Yes, she is always relaxed.",
-        "reply": "Anyway, it ______ a beautiful day eighteen years ago.",
+        "reply": "Anyway, it ______ a beautiful day eighty years ago.",
         "answers": [
           "did",
           "was",
@@ -68,7 +68,7 @@
     "phrases": [
       {
         "question": "Hi Alex. Do you know about yesterday's story?",
-        "reply": "Hi Harley! I don't know much. You _____ to give a gift to a friend...",
+        "reply": "Hi Harley! I don't know much. You ______ to give a gift to a friend...",
         "answers": [
           "wanted",
           "wants",
@@ -78,7 +78,7 @@
       },
       {
         "question": "And what else?",
-        "reply": "You ______ find a gift in one store but...",
+        "reply": "You _______ find a gift in one store but...",
         "answers": [
           "didn't",
           "did",
@@ -88,7 +88,7 @@
       },
       {
         "question": "But I found a T-shirt with a picture of a bear in another store.",
-        "reply": "And didn't the problem appear?",
+        "reply": "And _______ the problem appear?",
         "answers": [
           "wasn't",
           "isn't",
@@ -108,7 +108,7 @@
       },
       {
         "question": "Yes, it was awkward!",
-        "reply": "Yes, but your friend ... it and that's the main thing.",
+        "reply": "Yes, but your friend ________ it and that's the main thing.",
         "answers": [
           "like",
           "liked",
@@ -121,8 +121,8 @@
   {
     "phrases": [
       {
-        "question": "I was in USA two years ago!",
-        "reply": "Oh, I ____ in this country two years ago!",
+        "question": "I was in the USA two years ago!",
+        "reply": "Oh, I _____ in this country two years ago!",
         "answers": [
           "am",
           "live",
@@ -132,7 +132,7 @@
       },
       {
         "question": "In Washington?",
-        "reply": "No, I ____ live in Washington.",
+        "reply": "No, I _____ live in Washington.",
         "answers": [
           "did",
           "didn’t",
@@ -151,8 +151,8 @@
         "answerIndex": 1
       },
       {
-        "question": "Yes, but I could live in Russia.",
-        "reply": "Why ____ you choose this country?",
+        "question": "Yes, but I could live in Moscow.",
+        "reply": "Why ____ you choose this city?",
         "answers": [
           "aren't",
           "did",
@@ -161,7 +161,7 @@
         "answerIndex": 2
       }, 
       {     
-        "question": "Because bears live in Russia.",
+        "question": "Because bears live in Moscow.",
         "reply": "Hm.. It ______ an interesting reason.",
         "answers": [
           "was",
