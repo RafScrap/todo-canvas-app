@@ -97,7 +97,7 @@
       },
       {
         "question": "Presidents don't play Genshin every day.",
-        "reply": "...I _____ want to be President.",
+        "reply": "...I _____ want to be president.",
         "answers": [
           "do not",
           "am not",
@@ -111,7 +111,7 @@
     "phrases": [
       {
         "question": "I have a friend.",
-        "reply": "My name is Mand.",
+        "reply": "My name ____ Fand.",
         "answers": [
           "are",
           "is",
@@ -130,7 +130,7 @@
         "answerIndex": 1
       },
       {
-        "question": "if life is bad, ",
+        "question": "if life is bad...",
         "reply": "We ____ sad.",
         "answers": [
           "am not",

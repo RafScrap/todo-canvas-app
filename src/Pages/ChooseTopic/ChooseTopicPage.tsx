@@ -9,15 +9,12 @@ type Topic = {
     id: string
 }
 
-
 export const ChooseTopicPage = () => {
 
     const [state, setState] = useState({
         loaded: false,
         topics: [] as Topic[]
     });
-
-
     useEffect(() => {
         if (!state.loaded)
             fetch('https://raw.githubusercontent.com/RafScrap/todo-canvas-app/main/data/themes.json')
@@ -42,7 +39,6 @@ export const ChooseTopicPage = () => {
                     <RectSkeleton width={"100%"} height={"300px"}/>
                 }
             </Row>
-
         </>
     )
 
